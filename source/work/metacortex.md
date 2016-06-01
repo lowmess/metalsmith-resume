@@ -1,8 +1,8 @@
 ---
 title: MetaCortex
 url: http://matrix.wikia.com/wiki/MetaCortex
-subtitle: Programmer
-startDate: 1994-08-01
+subtitle: Software Programmer
+startDate: 1997-09-13
 endDate: 1999-03-31
 location: Chicago, Illinois
 ---
