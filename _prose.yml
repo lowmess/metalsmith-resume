@@ -1,80 +1,81 @@
-rooturl: 'source'
-ignore: ['index.md', '404.md', 'work.md', 'education.md']
-media: 'source/images'
-metadata:
-  work:
-    - name: 'title'
-      field:
-        element: 'text'
-        label: 'Workplace'
-        placeholder: 'MetaCortex'
-        type: 'text'
-    - name: 'url'
-      field:
-        element: 'text'
-        label: 'Workplace website'
-        placeholder: 'http://metacortex.info'
-        type: 'text'
-    - name: 'subtitle'
-      field:
-        element: 'text'
-        label: 'Job Title'
-        placeholder: 'Software Programmer'
-        type: 'text'
-    - name: 'startDate'
-      field:
-        element: 'text'
-        label: 'Start Date'
-        placeholder: '1997-09-13'
-        type: 'text'
-    - name: 'endDate'
-      field:
-        element: 'text'
-        label: 'End Date'
-        help: 'leave blank for current position'
-        placeholder: '1999-03-31'
-        type: 'text'
-    - name: 'location'
-      field:
-        element: 'text'
-        label: 'Location'
-        placeholder: 'Chicago, Illinois'
-        type: 'text'
-  education:
-    - name: 'title'
-      field:
-        element: 'text'
-        label: 'Institution'
-        placeholder: 'University of Chicago'
-        type: 'text'
-    - name: 'url'
-      field:
-        element: 'text'
-        label: 'Institution website'
-        placeholder: 'http://uchicago.edu'
-        type: 'text'
-    - name: 'subtitle'
-      field:
-        element: 'text'
-        label: 'Degree'
-        placeholder: 'B.S., Computer Science'
-        type: 'text'
-    - name: 'startDate'
-      field:
-        element: 'text'
-        label: 'Start Date'
-        placeholder: '1989-09-06'
-        type: 'text'
-    - name: 'endDate'
-      field:
-        element: 'text'
-        label: 'End Date'
-        help: 'leave blank for current'
-        placeholder: '1994-05-15'
-        type: 'text'
-    - name: 'location'
-      field:
-        element: 'text'
-        label: 'Location'
-        placeholder: 'Chicago, Illinois'
-        type: 'text'
+prose:
+  rooturl: 'source'
+  ignore: ['index.md', '404.md', 'work.md', 'education.md']
+  media: 'source/images'
+  metadata:
+    work:
+      - name: 'title'
+        field:
+          element: 'text'
+          label: 'Workplace'
+          placeholder: 'MetaCortex'
+          type: 'text'
+      - name: 'url'
+        field:
+          element: 'text'
+          label: 'Workplace website'
+          placeholder: 'http://metacortex.info'
+          type: 'text'
+      - name: 'subtitle'
+        field:
+          element: 'text'
+          label: 'Job Title'
+          placeholder: 'Software Programmer'
+          type: 'text'
+      - name: 'startDate'
+        field:
+          element: 'text'
+          label: 'Start Date'
+          placeholder: '1997-09-13'
+          type: 'text'
+      - name: 'endDate'
+        field:
+          element: 'text'
+          label: 'End Date'
+          help: 'leave blank for current position'
+          placeholder: '1999-03-31'
+          type: 'text'
+      - name: 'location'
+        field:
+          element: 'text'
+          label: 'Location'
+          placeholder: 'Chicago, Illinois'
+          type: 'text'
+    education:
+      - name: 'title'
+        field:
+          element: 'text'
+          label: 'Institution'
+          placeholder: 'University of Chicago'
+          type: 'text'
+      - name: 'url'
+        field:
+          element: 'text'
+          label: 'Institution website'
+          placeholder: 'http://uchicago.edu'
+          type: 'text'
+      - name: 'subtitle'
+        field:
+          element: 'text'
+          label: 'Degree'
+          placeholder: 'B.S., Computer Science'
+          type: 'text'
+      - name: 'startDate'
+        field:
+          element: 'text'
+          label: 'Start Date'
+          placeholder: '1989-09-06'
+          type: 'text'
+      - name: 'endDate'
+        field:
+          element: 'text'
+          label: 'End Date'
+          help: 'leave blank for current'
+          placeholder: '1994-05-15'
+          type: 'text'
+      - name: 'location'
+        field:
+          element: 'text'
+          label: 'Location'
+          placeholder: 'Chicago, Illinois'
+          type: 'text'
