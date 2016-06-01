@@ -13,25 +13,25 @@ Metalsmith(__dirname)
   .source('source')
   .destination('_build')
   .metadata({
-    person: {
-      firstname: 'Ahuman',
-      lastname: 'Person',
-      title: '100% Not a Robot',
-      site: 'http://example.com',
-      sitename: 'My Wesbite',
-      email: 'human.person@example.com',
-      phone: '(123) 456-7890',
-      location: 'Earth'
-    }
     site: {
-      title: 'The Resume of a Human Person',
-      description: 'I am a human person and this is my resume.',
+      title: 'The Resume of Thomas A. Anderson (The One)',
+      description: 'Prophesized by The Oracle to be The One, Thomas A. Anderson freed humanity from the Matrix and ended the Machine War.',
       theme: '#2ecc71'
+    },
+    person: {
+      firstname: 'Thomas A.',
+      lastname: 'Anderson',
+      title: 'The One',
+      site: 'http://matrix.wikia.com/wiki/Neo',
+      sitename: 'Biography',
+      email: 'neo@nebuchadnezzar.ship',
+      phone: '(312) 555-0690',
+      location: '???'
     },
     social: {
       LinkedIn: '',
-      GitHub: '',
-      Twitter: '@person',
+      GitHub: 'neo',
+      Twitter: '@neo',
       Facebook: '',
       Codepen: '',
       Dribbble: '',
@@ -40,9 +40,10 @@ Metalsmith(__dirname)
       Medium: ''
     },
     proficiencies: [
-      'breathing',
-      'not being a robot',
-      'drinking water to survive'
+      'martial arts',
+      'negotiations',
+      'hovercraft piloting',
+      'hacking'
     ]
   })
   // CSS
