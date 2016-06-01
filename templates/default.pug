@@ -1,0 +1,30 @@
+doctype html
+include mixins
+head
+  include partials/head
+body
+  article.resume
+    include partials/header
+
+    main.content
+      block content
+
+        section.work
+          h2: a(href="/work") Work
+          each job in [collections.work[0], collections.work[1], collections.work[2]]
+            +experience(job)
+
+        section.education
+          h2: a(href="/education") Education
+          - var school = collections.education[0]
+          +experience(school)
+
+        section.proficiencies
+          h2 Proficiencies
+          ul
+            each skill in proficiencies
+              li= skill
+
+        footer
+          hr
+          p: a(href='mailto:' + person.email) References available upon request

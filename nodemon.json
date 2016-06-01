@@ -1,0 +1,15 @@
+{
+  "verbose": true,
+  "ignore": [
+    ".git",
+    "node_modules",
+    "_build"
+  ],
+  "watch": [
+    "source/**/*.*",
+    "templates/**/*.*"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  }
+}

@@ -13,10 +13,37 @@ Metalsmith(__dirname)
   .source('source')
   .destination('_build')
   .metadata({
-    site: {
-      title: 'Resume',
-      description: 'I am a human person and this is my resume.'
+    person: {
+      firstname: 'Ahuman',
+      lastname: 'Person',
+      title: '100% Not a Robot',
+      site: 'http://example.com',
+      sitename: 'My Wesbite',
+      email: 'human.person@example.com',
+      phone: '(123) 456-7890',
+      location: 'Earth'
     }
+    site: {
+      title: 'The Resume of a Human Person',
+      description: 'I am a human person and this is my resume.',
+      theme: '#2ecc71'
+    },
+    social: {
+      LinkedIn: '',
+      GitHub: '',
+      Twitter: '@person',
+      Facebook: '',
+      Codepen: '',
+      Dribbble: '',
+      Tumblr: '',
+      reddit: '',
+      Medium: ''
+    },
+    proficiencies: [
+      'breathing',
+      'not being a robot',
+      'drinking water to survive'
+    ]
   })
   // CSS
   .use(sass({

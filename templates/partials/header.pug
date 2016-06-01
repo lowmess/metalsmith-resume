@@ -1,0 +1,17 @@
+header.header
+  .header__intro
+    h1.header__name: a(href="/")= person.firstname + '<br />' + person.lastname
+    h3.header__title= person.title
+    hr
+  .header__contact
+    ul
+      if person.site
+        li.header__info.header__info--site: a(href=person.site)= (person.sitename ? person.sitename : person.site)
+      if person.email
+        li.header__info.header__info--email: a(href='mailto:' + person.email)= person.email
+      if person.phone
+        li.header__info.header__info--phone= person.phone
+      if person.location
+        li.header__info.header__info--location= person.location
+      each account, site in social
+        li.header__info(class='header__info--' + site): a(href='//' + site + '.com/' + account)= site

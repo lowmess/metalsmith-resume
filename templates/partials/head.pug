@@ -1,0 +1,20 @@
+meta(charset="UTF-8")
+meta(content="width=device-width, initial-scale=1", name="viewport")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="theme-color", content=site.theme)
+
+meta(name="description", content=site.description)
+
+//- Open Graph / Twitter Card
+if social.twitter != ''
+  meta(name="twitter:site", content=social.twitter)
+meta(name="twitter:card", content="summary")
+meta(property="og:title", name="twitter:title", content=site.title)
+meta(property="og:url", content=path)
+meta(property="og:image", content=image ? image : "/images/site.favicon-196.png")
+meta(property="og:description", name="twitter:description", content=site.description)
+
+title= site.title
+
+link(rel="stylesheet", type="text/css", href="https://fonts.googleapis.com/css?family=Merriweather:400,700italic,400italic,700|Montserrat:400,700")
+link(rel="stylesheet", type="text/css", href="/css/main.css")

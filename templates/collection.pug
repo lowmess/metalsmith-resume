@@ -1,0 +1,15 @@
+extends default
+
+block content
+
+  h2= title
+  if title == "work"
+    for job in collections.work
+      +experience(job)
+  else if title == "education"
+    for school in collections.education
+      +experience(school)
+
+  footer
+    hr
+    p: a(href="/") Back to Full Resume
