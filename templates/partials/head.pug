@@ -6,12 +6,12 @@ meta(name="theme-color", content=site.theme)
 meta(name="description", content=site.description)
 
 //- Open Graph / Twitter Card
-if social.twitter != ''
+if social.twitter
   meta(name="twitter:site", content=social.twitter)
 meta(name="twitter:card", content="summary")
 meta(property="og:title", name="twitter:title", content=site.title)
 meta(property="og:url", content=path)
-meta(property="og:image", content=image ? image : "/images/site.favicon-196.png")
+//- meta(property="og:image", content=site.logo)
 meta(property="og:description", name="twitter:description", content=site.description)
 
 title= site.title

@@ -1,7 +1,9 @@
 doctype html
 include mixins
+
 head
   include partials/head
+
 body
   article.resume
     include partials/header
@@ -25,6 +27,7 @@ body
             each skill in proficiencies
               li= skill
 
-        footer
-          hr
-          p: a(href='mailto:' + person.email) References available upon request
+        if person.email
+          footer
+            hr
+            p: a(href='mailto:' + person.email) References available upon request

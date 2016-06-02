@@ -1,9 +1,9 @@
 prose:
   rooturl: 'source'
-  ignore: ['index.md', '404.md', 'work.md', 'education.md']
+  ignore: ['index.md', '404.md', 'work.md', 'education.md', 'scripts', 'stylesheets']
   media: 'source/images'
   metadata:
-    work:
+    'source/work':
       - name: 'title'
         field:
           element: 'text'
@@ -41,7 +41,7 @@ prose:
           label: 'Location'
           placeholder: 'Chicago, Illinois'
           type: 'text'
-    education:
+    'source/education':
       - name: 'title'
         field:
           element: 'text'
