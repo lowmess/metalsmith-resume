@@ -3,10 +3,10 @@ extends default
 block content
 
   h2= title
-  if title == "work"
+  if title == 'Work'
     for job in collections.work
       +experience(job)
-  else if title == "education"
+  else if title == 'Education'
     for school in collections.education
       +experience(school)
 
