@@ -21,11 +21,12 @@ body
           - var school = collections.education[0]
           +experience(school)
 
-        section.proficiencies
-          h2 Proficiencies
-          ul
-            each skill in proficiencies
-              li= skill
+        if person.proficiencies
+          section.proficiencies
+            h2 Proficiencies
+            ul
+              each skill in person.proficiencies
+                li= skill
 
         if person.email
           footer

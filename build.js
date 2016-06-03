@@ -13,7 +13,7 @@ var siteBuild = Metalsmith(__dirname)
   .source('source')
   .destination('_build')
   .metadata({
-    site: {
+    global: {
       title: 'The Resume of Thomas A. Anderson (The One)',
       description: 'Prophesized by The Oracle to be The One, Thomas A. Anderson freed humanity from the Matrix and ended the Machine War.',
       theme: '#2ecc71'
@@ -26,7 +26,7 @@ var siteBuild = Metalsmith(__dirname)
       sitename: 'Biography',
       email: 'neo@nebuchadnezzar.ship',
       phone: '(312) 555-0690',
-      location: '???'
+      location: '???',
       social: {
         LinkedIn: '',
         GitHub: 'github.com/neo',
@@ -37,14 +37,15 @@ var siteBuild = Metalsmith(__dirname)
         Tumblr: '',
         reddit: '',
         Medium: ''
-      }
-    },
-    proficiencies: [
-      'martial arts',
-      'negotiations',
-      'hovercraft piloting',
-      'hacking'
-    ]
+      },
+      proficiencies: [
+        'Hacking',
+        'Creative entrepeneurship',
+        'Martial arts',
+        'Negotiations',
+        'Hovercraft piloting'
+      ]
+    }
   })
   // CSS
   .use(sass({
