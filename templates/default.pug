@@ -12,18 +12,18 @@ body
       block content
 
         section.work
-          h2: a(href="/work") Work
+          h3: a(href="/work") Work
           each job in [collections.work[0], collections.work[1], collections.work[2]]
             +experience(job)
 
         section.education
-          h2: a(href="/education") Education
+          h3: a(href="/education") Education
           - var school = collections.education[0]
           +experience(school)
 
         if person.proficiencies
           section.proficiencies
-            h2 Proficiencies
+            h3 Proficiencies
             ul
               each skill in person.proficiencies
                 li= skill

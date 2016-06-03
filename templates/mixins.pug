@@ -2,12 +2,12 @@ mixin experience(object)
   .experience
     .experience__info
       .experience__name
-        h3.experience__title
+        h4.experience__title
           if object.url
             a(href=object.url)= object.title
           else
             = object.title
-        h4.experience__subtitle= object.subtitle
+        h5.experience__subtitle= object.subtitle
       ul.experience__meta
         li.experience__data.expereince__data--date
           time(datetime=moment.utc(object.startDate))= moment.utc(object.startDate).format("MMM YYYY")

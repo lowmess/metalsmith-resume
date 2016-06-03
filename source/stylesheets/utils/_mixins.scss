@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// EVENT WRAPPER
+// =============
+// @author Harry Roberts
+// @param {Bool} $self [false] - Whether or not to include current selector
+// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+// CONTEXT SELECTOR
+// ================
+// Make a context based selector a little more friendly
+// @author Hugo Giraudel
+// @param {String} $context
+
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+// BREAKPOINT MANAGER
+// ==================
+// @param {String} $breakpoint - Breakpoint
+// @requires $breakpoints
+// @link http://sass-guidelin.es/#breakpoint-manager Sass Guidelines - Breakpoint Manager
+
+@mixin respond-to($breakpoint) {
+  $query: map-get($breakpoints, $breakpoint);
+
+  @if not $query {
+    @error 'No value found for `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.';
+  }
+
+  @media #{if(type-of($query) == 'string', unquote($query), inspect($query))} {
+    @content;
+  }
+}
+
+// GET FONTS
+// =========
+// Retrieves font based on group & id combo.
+// Modified from original for simplicity
+// @author hmphry
+// @param {String} $id - the weight of the font
+// @requires $font-stack
+// @link http://hmphry.com/useful-sass-mixins
+
+@mixin font($id:regular){
+  @each $font in $font-stack{
+    @if($id == map-get($font, id)){
+      font-family: map-get($font, font);
+      font-weight: map-get($font, weight);
+      font-style: map-get($font, style);
+    }
+  }
+}

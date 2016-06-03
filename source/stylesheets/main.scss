@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+
+// 1. Vendors
+@import
+  'vendor/normalize',
+  'bourbon'; // @link http://bourbon.io
+
+// 2. Configuration and helpers
+@import
+  'utils/variables',
+  'utils/functions',
+  'utils/mixins';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/typography';
+
+// 4. Layout-related sections
+@import
+  'layout/resume',
+  'layout/person',
+  'layout/proficiencies';
+
+// 5. Components
+@import
+  'components/experience';
+
+// 6. Page-specific styles
+//@import
+//  'pages/home';
+
+// 7. Themes
+@import
+  'themes/print';

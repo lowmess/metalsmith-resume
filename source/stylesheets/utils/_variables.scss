@@ -1,0 +1,102 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// COLOR
+// =====
+
+// Color Palette:
+
+$oracle: #ffffff;
+$mouse: #f5f5f5;
+$neo: #2ecc71;
+$morpheus: #424242;
+
+// Color Settings:
+
+$brand: $neo;
+
+$text: $morpheus;
+$link: $neo;
+$outline: $mouse;
+$background: $mouse;
+$page: $oracle;
+$shadow: rgba($morpheus, 0.5);
+
+// TYPOGRAPHY
+// ==========
+
+$modular-scale-base: 1rem;
+$measure: 8.5in;
+
+// Small font sizes
+
+$modular-scale-ratio: $perfect-fourth;
+
+$base-font-size: modular-scale(0);
+$h1-font-size: modular-scale(3);
+$h2-font-size: modular-scale(1);
+$h3-font-size: modular-scale(2);
+$h4-font-size: modular-scale(1);
+$h5-font-size: modular-scale(0);
+
+$small-font-size: modular-scale(-1);
+
+// Line Heights
+
+$base-line-height: 1.65rem;
+
+$h1-line-height: $base-line-height * 1.5;
+$h2-line-height: $base-line-height * 1.25;
+$h3-line-height: $base-line-height * 1.5;
+$h4-line-height: $base-line-height * 1.25;
+$h5-line-height: $base-line-height;
+
+// GRID SETTINGS
+// =============
+
+$gutter: $base-line-height !global;
+$max-width: $measure !global;
+
+// BREAKPOINTS
+// ===========
+
+$breakpoints: (
+  medium: "(min-width: 40em)",
+  page: "screen and (min-width: 9in)",
+
+  print: "print"
+);
+
+// Z-INDEX
+// =======
+// A running list of z-indexii. Used with @function z.
+
+$zindex: (
+
+);
+
+
+// FONT-STACKS
+// ===========
+
+// https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic,800,800italic,600,600italic
+$font-family: 'Open Sans', $helvetica;
+
+// FONTS
+// =====
+// Font grouping for shorthand calls. Use with the 'font' mixin to call a font, e.g.:
+// .component { @include font(heading-text, bold-italic); }
+
+$font-stack:
+
+  (id: light, font: $font-family, weight: 300, style: normal),
+  (id: light-italic, font: $font-family, weight: 300, style: italic),
+  (id: regular, font: $font-family, weight: 400, style: normal),
+  (id: italic, font: $font-family, weight: 400, style: italic),
+  (id: semi-bold, font: $font-family, weight: 600, style: normal),
+  (id: semi-bold-italic, font: $font-family, weight: 600, style: italic),
+  (id: bold, font: $font-family, weight: 700, style: normal),
+  (id: bold-italic, font: $font-family, weight: 700, style: italic),
+  (id: black, font: $font-family, weight: 800, style: normal),
+  (id: black-italic, font: $font-family, weight: 800, style: italic);

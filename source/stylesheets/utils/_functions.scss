@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+
+// GET Z-INDEX
+// ===========
+// return a z-index from map $zindex
+// @param {String} $label - the key for the z-index value to return from $zindex.
+// @requires $zindex
+
+@function z($label) {
+    @return map-get($zindex,$label);
+}

@@ -1,18 +1,18 @@
-header.header
-  .header__intro
-    h1.header__name: a(href="/")= person.firstname + '<br />' + person.lastname
-    h3.header__title= person.title
+header.person
+  .person__intro
+    h1.person__name: a(href="/")!= person.firstname + '<br />' + person.lastname
+    h2.person__title= person.title
     hr
-  .header__contact
+  .person__contact
     ul
       if person.site
-        li.header__info.header__info--site: a(href=person.site)= (person.sitename ? person.sitename : person.site)
+        li.person__info.person__info--site: a(href=person.site)= (person.sitename ? person.sitename : person.site)
       if person.email
-        li.header__info.header__info--email: a(href='mailto:' + person.email)= person.email
+        li.person__info.person__info--email: a(href='mailto:' + person.email)= person.email
       if person.phone
-        li.header__info.header__info--phone= person.phone
+        li.person__info.person__info--phone= person.phone
       if person.location
-        li.header__info.header__info--location= person.location
+        li.person__info.person__info--location= person.location
       each url, site in person.social
         if url != '' && site != ''
-          li.header__info(class='header__info--' + site): a(href=url)= site
+          li.person__info(class='person__info--' + site): a(href=url)= site

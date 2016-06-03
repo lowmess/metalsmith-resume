@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the experience component.
+// -----------------------------------------------------------------------------
+
+.experience {
+  width: 100%;
+
+  margin-top: -$base-line-height;
+
+  &__info {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    & + ul {
+      margin-top: 0;
+    }
+  }
+
+  &__name {
+    flex: 1;
+  }
+  &__title {
+    margin-bottom: 0;
+  }
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  &__meta {
+    flex: 1;
+
+    margin-bottom: 1rem;
+
+    text-align: right;
+    line-height: 1.5rem;
+
+    list-style-type: none;
+
+    li {
+      white-space: nowrap;
+    }
+  }
+}

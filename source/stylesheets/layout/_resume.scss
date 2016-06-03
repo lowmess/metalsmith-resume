@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the cv.
+// -----------------------------------------------------------------------------
+
+.resume {
+  max-width: $measure;
+
+  margin: 0 auto;
+
+  background: $page;
+
+  @include respond-to(page) {
+    margin-bottom: $h1-line-height;
+
+    box-shadow: 0 $base-font-size $h1-font-size 0 $shadow;
+  }
+
+  // transition: box-shadow 0.75s ease;
+}

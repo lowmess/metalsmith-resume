@@ -1,0 +1,49 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the header.
+// -----------------------------------------------------------------------------
+
+.person {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: $gutter $gutter 0 $gutter;
+
+  &__intro {
+    flex: 1;
+  }
+  &__name {
+    margin-top: 0;
+    margin-bottom: $base-font-size;
+
+    line-height: 1;
+
+    a {
+      color: $link;
+    }
+  }
+  &__title {
+    margin-top: $base-font-size;
+  }
+
+  &__contact {
+    flex: 1;
+
+    margin-top: 0;
+
+    text-align: right;
+
+    ul {
+      margin-top: 0;
+
+      line-height: 1.5rem;
+
+      list-style-type: none;
+    }
+
+    li {
+      white-space: nowrap;
+    }
+  }
+}
