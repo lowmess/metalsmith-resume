@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+
+/* vendor */
+@import "normalize.css";
+@import "basscss-margin";
+
+/* common */
+@import "settings";
+
+/* base */
+@import "base;
+
+/* layout */
+@import "page";

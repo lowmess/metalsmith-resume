@@ -13,6 +13,5 @@ header.person
         li.person__info.person__info--phone= person.phone
       if person.location
         li.person__info.person__info--location= person.location
-      each url, site in person.social
-        if url != '' && site != ''
-          li.person__info(class='person__info--' + site): a(href=url)= site
+      if person.social.text && person.social.url
+        li.person__info.person__info--social: a(href=person.social.url)= person.social.text

@@ -1,0 +1,15 @@
+.page {
+  max-width: var(--page-width);
+
+  background: var(--page-color);
+
+  @media (screen and min-width: 9in) {
+    box-shadow: 0 1rem 3rem 0 var(--shadow-color);
+  }
+
+  @media (print) {
+    margin: 0;
+
+    box-shadow: none;
+  }
+}

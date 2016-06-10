@@ -5,8 +5,7 @@ var layouts = require('metalsmith-layouts')
 var markdown = require('metalsmith-markdownit')
 var collections = require('metalsmith-collections')
 // CSS
-var sass = require('metalsmith-sass')
-var prefix = require('metalsmith-autoprefixer')
+var postcss = require('metalsmith-postcss')
 var bourbon = require('node-bourbon').includePaths
 
 var siteBuild = Metalsmith(__dirname)
@@ -28,15 +27,8 @@ var siteBuild = Metalsmith(__dirname)
       phone: '(312) 555-0690',
       location: '???',
       social: {
-        LinkedIn: '',
-        GitHub: 'github.com/neo',
-        Twitter: 'twitter.com/neo',
-        Facebook: '',
-        Codepen: '',
-        Dribbble: '',
-        Tumblr: '',
-        reddit: '',
-        Medium: ''
+        text: '@neo'
+        url: 'twitter.com/neo'
       },
       proficiencies: [
         'Hacking',
@@ -48,12 +40,19 @@ var siteBuild = Metalsmith(__dirname)
     }
   })
   // CSS
-  .use(sass({
-    includePaths: bourbon,
-    outputStyle: 'compressed',
-    outputDir: 'css/'
+  .use(postcss({
+    plugins: {
+      'postcss-import': {},
+      'postcss-nested': {},
+      'postcss-custom-properties': {},
+      'autoprefixer': {
+        browsers: ['last 2 versions', '> 5%']
+      }
+    },
+    map: {
+      inline: false
+    }
   }))
-  .use(prefix())
   // HTML
   .use(collections({
     education: {

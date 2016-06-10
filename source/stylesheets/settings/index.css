@@ -1,0 +1,13 @@
+:root {
+  /* Color Palette: */
+
+  --oracle: #ffffff;
+  --trinity: #f5f5f5;
+  --neo: #2ecc71;
+  --morpheus: #424242;
+
+  /* page settings: */
+
+  --page-width: 8.5in;
+  --page-color: var(--oracle);
+}
