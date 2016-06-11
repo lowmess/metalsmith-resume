@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 
 /* vendor */
 @import "normalize.css";
@@ -8,7 +8,8 @@
 @import "settings";
 
 /* base */
-@import "base;
+@import "base";
 
 /* layout */
 @import "page";
+@import "columns";

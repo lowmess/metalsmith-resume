@@ -6,6 +6,11 @@
   --neo: #2ecc71;
   --morpheus: #424242;
 
+  /* general settings */
+
+  --background: var(--trinity);
+  --shadow-color: rgba(var(--morpheus), 0.5);
+
   /* page settings: */
 
   --page-width: 8.5in;

@@ -33,6 +33,7 @@
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.12.10",
+    "del": "^2.2.0",
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-layouts": "^1.6.5",
@@ -45,6 +46,7 @@
     "postcss-basscss": "^0.2.3",
     "postcss-custom-properties": "^5.0.1",
     "postcss-discard-comments": "^2.0.4",
+    "postcss-hexrgba": "^0.2.0",
     "postcss-import": "^8.1.2",
     "postcss-nested": "^1.0.0",
     "pug": "^2.0.0-alpha8"

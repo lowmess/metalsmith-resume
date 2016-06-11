@@ -1,3 +1,6 @@
+var fs = require('fs')
+var del = require('del')
+// Metalsmith
 var Metalsmith = require('metalsmith')
 var permalinks = require('metalsmith-permalinks')
 // HTML
@@ -6,7 +9,6 @@ var markdown = require('metalsmith-markdownit')
 var collections = require('metalsmith-collections')
 // CSS
 var postcss = require('metalsmith-postcss')
-var bourbon = require('node-bourbon').includePaths
 
 var siteBuild = Metalsmith(__dirname)
   .source('source')
@@ -27,7 +29,7 @@ var siteBuild = Metalsmith(__dirname)
       phone: '(312) 555-0690',
       location: '???',
       social: {
-        text: '@neo'
+        text: '@neo',
         url: 'twitter.com/neo'
       },
       proficiencies: [
@@ -45,9 +47,11 @@ var siteBuild = Metalsmith(__dirname)
       'postcss-import': {},
       'postcss-nested': {},
       'postcss-custom-properties': {},
+      'postcss-hexrgba': {},
       'autoprefixer': {
         browsers: ['last 2 versions', '> 5%']
-      }
+      },
+      'postcss-discard-comments': {}
     },
     map: {
       inline: false
@@ -92,6 +96,10 @@ siteBuild.build(function (err) {
   if (err) {
     console.log(err)
   } else {
+    // Rename CSS output file & delete unnecessary directories
+    fs.rename('_build/stylesheets', '_build/css')
+    del(['_build/css/**', '!_build/css', '!_build/css/main.css', '!_build/css/main.css.map'])
+
     console.log('Site build complete!')
   }
 })
