@@ -2,7 +2,17 @@
 
 /* vendor */
 @import "normalize.css";
-@import "basscss-margin";
+@import "tachyons-colors/src/tachyons-colors.css";
+@import "tachyons-spacing/src/tachyons-spacing.css";
+@import "tachyons-typography/src/tachyons-typography.css";
+@import "tachyons-letter-spacing/src/tachyons-letter-spacing.css";
+@import "tachyons-type-scale/src/tachyons-type-scale.css";
+@import "tachyons-font-family/src/tachyons-font-family.css";
+@import "tachyons-font-weight/src/tachyons-font-weight.css";
+@import "tachyons-links/src/tachyons-links.css";
+@import "tachyons-widths/src/tachyons-widths.css";
+@import "tachyons-clears/src/tachyons-clears.css";
+@import "tachyons-floats/src/tachyons-floats.css";
 
 /* common */
 @import "settings";

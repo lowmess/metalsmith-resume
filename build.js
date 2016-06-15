@@ -47,6 +47,7 @@ var siteBuild = Metalsmith(__dirname)
       'postcss-import': {},
       'postcss-nested': {},
       'postcss-custom-properties': {},
+      'postcss-custom-media': {},
       'postcss-hexrgba': {},
       'autoprefixer': {
         browsers: ['last 2 versions', '> 5%']
