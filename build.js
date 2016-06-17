@@ -52,7 +52,7 @@ var siteBuild = Metalsmith(__dirname)
       'autoprefixer': {
         browsers: ['last 2 versions', '> 5%']
       },
-      'postcss-discard-comments': {}
+      'cssnano': {}
     },
     map: {
       inline: false

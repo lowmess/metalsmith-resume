@@ -3,11 +3,11 @@
 
   background: var(--page-color);
 
-  @media (screen and min-width: 9in) {
-    box-shadow: 0 1rem 3rem 0 var(--shadow-color);
+  @media (--breakpoint-page-preview) {
+    box-shadow: 0 var(--spacing-medium) var(--spacing-large) 0 var(--shadow-color);
   }
 
-  @media (print) {
+  @media print {
     margin: 0;
 
     box-shadow: none;

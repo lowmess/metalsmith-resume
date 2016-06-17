@@ -2,6 +2,7 @@
 
 /* vendor */
 @import "normalize.css";
+@import "tachyons-box-sizing/src/tachyons-box-sizing.css";
 @import "tachyons-colors/src/tachyons-colors.css";
 @import "tachyons-spacing/src/tachyons-spacing.css";
 @import "tachyons-typography/src/tachyons-typography.css";
@@ -13,6 +14,7 @@
 @import "tachyons-widths/src/tachyons-widths.css";
 @import "tachyons-clears/src/tachyons-clears.css";
 @import "tachyons-floats/src/tachyons-floats.css";
+@import "tachyons-columns/src/tachyons-columns.css";
 
 /* common */
 @import "settings";
