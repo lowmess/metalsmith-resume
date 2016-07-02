@@ -44,11 +44,12 @@ var siteBuild = Metalsmith(__dirname)
   // CSS
   .use(postcss({
     plugins: {
+      'stylelint': {},
       'postcss-import': {},
       'postcss-nested': {},
       'postcss-custom-properties': {},
       'postcss-custom-media': {},
-      'postcss-hexrgba': {},
+      'postcss-color-function': {},
       'autoprefixer': {
         browsers: ['last 2 versions', '> 5%']
       },

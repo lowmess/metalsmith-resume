@@ -2,14 +2,14 @@
   /* Color Palette: */
 
   --oracle: #ffffff;
-  --trinity: #f5f5f5;
+  --trinity: #ecf0f1;
   --neo: #2ecc71;
   --morpheus: #424242;
 
   /* general settings */
 
   --background: var(--trinity);
-  --shadow-color: rgba(var(--morpheus), 0.5);
+  --shadow-color: color(var(--morpheus) a(50%));
 
   /* page settings: */
 
@@ -18,8 +18,8 @@
 
   /* Tachyons Spacing Scale - based on a ratio of 1:2 */
   --spacing-none: 0;
-  --spacing-extra-small: .25rem;
-  --spacing-small: .5rem;
+  --spacing-extra-small: 0.25rem;
+  --spacing-small: 0.5rem;
   --spacing-medium: 1rem;
   --spacing-large: 2rem;
   --spacing-extra-large: 4rem;

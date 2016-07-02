@@ -4,7 +4,11 @@
   background: var(--page-color);
 
   @media (--breakpoint-page-preview) {
-    box-shadow: 0 var(--spacing-medium) var(--spacing-large) 0 var(--shadow-color);
+    margin: 0 auto;
+    margin-top: var(--spacing-extra-large);
+    margin-bottom: var(--spacing-extra-large);
+
+    box-shadow: 0 var(--spacing-small) var(--spacing-large) 0 var(--shadow-color);
   }
 
   @media print {

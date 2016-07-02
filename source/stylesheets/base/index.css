@@ -10,9 +10,7 @@ body {
 
   background: var(--page-color);
 
-  @media (min-width: 9in) {
-    padding-top: 3.5rem;
-
+  @media (--breakpoint-page-preview) {
     background: var(--background);
   }
 }
