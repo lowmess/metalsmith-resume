@@ -1,21 +1,25 @@
-mixin experience(object)
+mixin experience(exp)
   section.experience
-    .experience__info
-      .experience__name
-        h4.experience__title
-          if object.url
-            a(href=object.url)= object.title
-          else
-            = object.title
-        h5.experience__subtitle= object.subtitle
-      ul.experience__meta
-        li.experience__data.expereince__data--date
-          time(datetime=moment.utc(object.startDate))= moment.utc(object.startDate).format("MMM YYYY")
-          | &#032;&ndash;&#032;
-          if object.endDate
-            time(datetime=moment.utc(object.endDate))= moment.utc(object.endDate).format("MMM YYYY")
-          else
-            | Current
-        if object.location
-          li.experience__data.expereince__data--location= object.location
-    != object.contents
+    .w-100-ns.cf.mb2.mt2
+      //- Time
+      h5.f6.f5-ns.ttu.tracked.fw2.mv0.fl-ns.pr3.br
+        time(datetime=moment.utc(exp.startDate))= moment.utc(exp.startDate).format("MMM YYYY")
+        | &#032;&ndash;&#032;
+        if exp.endDate
+          time(datetime=moment.utc(exp.endDate))= moment.utc(exp.endDate).format("MMM YYYY")
+        else
+          | Current
+      //- Location
+      if exp.location
+        h5.f6.f5-ns.ttu.tracked.fw2.mv0.fl-ns.ml3= exp.location
+    //- Title
+    h3.f3.f2-ns.mt2.mb1.fw7
+      if exp.url
+        a(href=exp.url)= exp.title
+      else
+        = exp.title
+    //- Subtitle
+    h4.f4.f3-ns.mt1.mb2.fw4= exp.subtitle
+    //- Contents
+    .measure.mt3.mb4
+      != exp.contents

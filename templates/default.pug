@@ -11,20 +11,25 @@ body
     main.content
       block content
 
-        section.work
-          h3: a(href="/work") Work
-          each job in [collections.work[0], collections.work[1], collections.work[2]]
-            +experience(job)
+        section.work.cf
+          .w-20-ns.fl-ns
+            h3.mt1: a(href="/work") Work
+          .w-80-ns.fr-ns
+            each job in [collections.work[0], collections.work[1], collections.work[2]]
+              +experience(job)
 
-        section.education
-          h3: a(href="/education") Education
-          - var school = collections.education[0]
-          +experience(school)
+        section.education.cf
+          .w-20-ns.fl-ns
+            h3.mt1: a(href="/education") Education
+          .w-80-ns.fr-ns
+            - var school = collections.education[0]
+            +experience(school)
 
         if person.proficiencies
-          section.proficiencies
-            h3 Proficiencies
-            ul
+          section.skills.cf
+            .w-20-ns.fl-ns
+              h3.mt1 Proficiencies
+            ul.cc2-ns.cg3-ns.lspi-ns.pl4.pl3-ns.w-80-ns.fr-ns
               each skill in person.proficiencies
                 li= skill
 
