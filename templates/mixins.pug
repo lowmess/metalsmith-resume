@@ -1,8 +1,8 @@
 mixin experience(exp)
   section.experience
-    .w-100-ns.cf.mb2.mt2
+    .w-100-ns.cf.mv2
       //- Time
-      h5.f6.f5-ns.ttu.tracked.fw2.mv0.fl-ns.pr3.br
+      h5.f6.f5-ns.ttu.tracked.fw2.mb1.mv0-ns.fl-ns.pr3-ns.br-ns
         time(datetime=moment.utc(exp.startDate))= moment.utc(exp.startDate).format("MMM YYYY")
         | &#032;&ndash;&#032;
         if exp.endDate
@@ -11,7 +11,7 @@ mixin experience(exp)
           | Current
       //- Location
       if exp.location
-        h5.f6.f5-ns.ttu.tracked.fw2.mv0.fl-ns.ml3= exp.location
+        h5.f6.f5-ns.ttu.tracked.fw2.mt1.mb0.mv0-ns.fl-ns.ml3-ns= exp.location
     //- Title
     h3.f3.f2-ns.mt2.mb1.fw7
       if exp.url
@@ -19,7 +19,7 @@ mixin experience(exp)
       else
         = exp.title
     //- Subtitle
-    h4.f4.f3-ns.mt1.mb2.fw4= exp.subtitle
+    h4.f5.f4-ns.mt1.mb2.fw4= exp.subtitle
     //- Contents
     .measure.mt3.mb4
       != exp.contents
