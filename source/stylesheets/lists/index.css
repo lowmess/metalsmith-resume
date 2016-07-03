@@ -1,0 +1,21 @@
+.lspi {
+  list-style-position: inside;
+}
+
+@media (--breakpoint-not-small) {
+  .lspi-ns {
+    list-style-position: inside;
+  }
+}
+
+@media (--breakpoint-medium) {
+  .lspi-m {
+    list-style-position: inside;
+  }
+}
+
+@media (--breakpoint-large) {
+  .lspi-l {
+    list-style-position: inside;
+  }
+}
