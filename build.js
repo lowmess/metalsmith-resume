@@ -20,12 +20,11 @@ var siteBuild = Metalsmith(__dirname)
       theme: '#2ecc71'
     },
     person: {
-      firstname: 'Thomas A.',
-      lastname: 'Anderson',
+      name: 'Thomas A. Anderson',
       title: 'The One',
       site: 'http://matrix.wikia.com/wiki/Neo',
       sitename: 'Biography',
-      email: 'neo@nebuchadnezzar.ship',
+      email: 'alec.lomas@meltmedia.com',
       phone: '(312) 555-0690',
       location: '???',
       social: {
@@ -67,7 +66,7 @@ var siteBuild = Metalsmith(__dirname)
       reverse: true
     },
     work: {
-      pattern: 'work/**/*.md',
+      pattern: 'experience/**/*.md',
       sortBy: 'startDate',
       reverse: true
     },

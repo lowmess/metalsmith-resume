@@ -1,19 +1,42 @@
-.page {
-  max-width: var(--page-width);
+:root {
+  /* Page Settings: */
+  --page-width: 8.5in;
 
-  background: var(--page-color);
+  /* Colors from Tachyons */
+  --light-gray: #eeeeee;
+  --white: #ffffff;
 
-  @media (--breakpoint-page-preview) {
-    margin: 0 auto;
+  /* Spacing from Tachyons */
+  --spacing-extra-large: 4rem;
+}
+
+/* Media Queries */
+@custom-media --breakpoint-page screen and (min-width: 9in);
+
+/* Styles */
+
+.mw-page { max-width: var(--page-width); }
+
+@media (--breakpoint-page) {
+  .bg-light-gray-page { background-color: var(--light-gray); }
+
+  .mv-5-page {
     margin-top: var(--spacing-extra-large);
     margin-bottom: var(--spacing-extra-large);
-
-    box-shadow: 0 var(--spacing-small) var(--spacing-large) 0 var(--shadow-color);
   }
 
-  @media print {
-    margin: 0;
-
-    box-shadow: none;
+  .mh-auto-page {
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  .shadow-2-page { box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2); }
+}
+
+@media print {
+  .m0-print { margin: 0; }
+
+  .bg-white-print { background-color: var(--white); }
+
+  .shadow-none-print { box-shadow: none; }
 }

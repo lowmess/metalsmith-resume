@@ -1,17 +1,14 @@
-header.person
-  .person__intro
-    h1.person__name: a(href="/")!= person.firstname + '<br />' + person.lastname
-    h2.person__title= person.title
-    hr
-  .person__contact
-    ul
-      if person.site
-        li.person__info.person__info--site: a(href=person.site)= (person.sitename ? person.sitename : person.site)
-      if person.email
-        li.person__info.person__info--email: a(href='mailto:' + person.email)= person.email
-      if person.phone
-        li.person__info.person__info--phone= person.phone
-      if person.location
-        li.person__info.person__info--location= person.location
-      if person.social.text && person.social.url
-        li.person__info.person__info--social: a(href=person.social.url)= person.social.text
+header
+  h1.f2.f1-ns.mt3: a.link.dark-gray(href="/")!= person.name
+  h2= person.title
+  ul.list
+    if person.site
+      li: a.link(href=person.site)= (person.sitename ? person.sitename : person.site)
+    if person.email
+      li: a.link(href='mailto:' + person.email)= person.email
+    if person.phone
+      li= person.phone
+    if person.location
+      li= person.location
+    if person.social.text && person.social.url
+      li: a.link(href=person.social.url)= person.social.text

@@ -4,36 +4,36 @@ include mixins
 head
   include partials/head
 
-body
-  article.page.pv3.ph4
+body.bg-white.bg-light-gray-page.bg-white-print
+  article.pv3.ph4.bg-white.dark-gray.mw-page.mv-5-page.mh-auto-page.m0-print.shadow-2-page.shadow-none-print
     include partials/header
 
     main.content
       block content
 
         section.work.cf
-          .w-20-ns.fl-ns
-            h3.mt1: a(href="/work") Work
-          .w-80-ns.fr-ns
+          .w-25-ns.fl-ns.tr-ns.pr4
+            h3.f4.f5-ns.fw7.mt2.mb0.ttu: a.link.dark-gray.underline-hover(href="/work") Experience
+          .w-75-ns.fr-ns
             each job in [collections.work[0], collections.work[1], collections.work[2]]
               +experience(job)
 
         section.education.cf
-          .w-20-ns.fl-ns
-            h3.mt1: a(href="/education") Education
-          .w-80-ns.fr-ns
+          .w-25-ns.fl-ns.tr-ns.pr4
+            h3.f4.f5-ns.fw7.mt2.mb0.ttu: a.link.dark-gray.underline-hover(href="/education") Education
+          .w-75-ns.fr-ns
             - var school = collections.education[0]
             +experience(school)
 
         if person.proficiencies
           section.skills.cf
-            .w-20-ns.fl-ns
-              h3.mt1 Proficiencies
-            ul.cc2-ns.cg3-ns.lspi-ns.pl4.pl3-ns.w-80-ns.fr-ns
+            .w-25-ns.fl-ns.tr-ns.pr4
+              h3.f4.f5-ns.fw7.mt2.mb0.ttu Proficiencies
+            ul.cc2-ns.cg4-ns.pl4.pl3-ns.w-75-ns.fr-ns.mt2
               each skill in person.proficiencies
                 li= skill
 
         if person.email
-          footer
-            hr
-            p: a(href='mailto:' + person.email) References available upon request
+          footer.mt3
+            hr.w5.ba.b--light-gray.ml0
+            p: a.link.dark-gray.underline-hover(href='mailto:' + person.email) References available upon request
