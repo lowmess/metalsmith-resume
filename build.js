@@ -7,8 +7,6 @@ var permalinks = require('metalsmith-permalinks')
 var layouts = require('metalsmith-layouts')
 var markdown = require('metalsmith-markdownit')
 var collections = require('metalsmith-collections')
-// CSS
-var postcss = require('metalsmith-postcss')
 
 var siteBuild = Metalsmith(__dirname)
   .source('source')
@@ -40,24 +38,6 @@ var siteBuild = Metalsmith(__dirname)
       ]
     }
   })
-  // CSS
-  .use(postcss({
-    plugins: {
-      'stylelint': {},
-      'postcss-import': {},
-      'postcss-nested': {},
-      'postcss-custom-properties': {},
-      'postcss-custom-media': {},
-      'postcss-color-function': {},
-      'autoprefixer': {
-        browsers: ['last 2 versions', '> 5%']
-      },
-      'cssnano': {}
-    },
-    map: {
-      inline: false
-    }
-  }))
   // HTML
   .use(collections({
     education: {
@@ -97,10 +77,6 @@ siteBuild.build(function (err) {
   if (err) {
     console.log(err)
   } else {
-    // Rename CSS output file & delete unnecessary directories
-    fs.rename('_build/stylesheets', '_build/css')
-    del(['_build/css/**', '!_build/css', '!_build/css/main.css', '!_build/css/main.css.map'])
-
     console.log('Site build complete!')
   }
 })
