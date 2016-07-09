@@ -1,5 +1,3 @@
-var fs = require('fs')
-var del = require('del')
 // Metalsmith
 var Metalsmith = require('metalsmith')
 var permalinks = require('metalsmith-permalinks')

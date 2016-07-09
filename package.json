@@ -10,7 +10,7 @@
     "start": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm run build && browser-sync reload'",
     "browser_sync": "browser-sync start --server _build --no-ui --no-notify",
     "build:html": "node build.js",
-    "build:css": "postcss -c postcss.json -d _build/css css/main.css",
+    "build:css": "postcss -c postcss.json -o _build/css/main.css --no-map.inline css/main.css",
     "build": "npm run build:html && npm run build:css"
   },
   "repository": {
@@ -36,7 +36,6 @@
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.12.10",
     "cssnano": "^3.7.1",
-    "del": "^2.2.0",
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-layouts": "^1.6.5",
