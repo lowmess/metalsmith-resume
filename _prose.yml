@@ -1,9 +1,9 @@
 prose:
   rooturl: 'source'
-  ignore: ['index.md', '404.md', 'work.md', 'education.md']
+  ignore: ['index.md', '404.md', 'experience.md', 'education.md']
   media: 'source/images'
   metadata:
-    'source/work':
+    'source/experience':
       - name: 'title'
         field:
           element: 'text'
