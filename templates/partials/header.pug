@@ -1,16 +1,16 @@
-header.pv3.ph4.bg-accent.bg-white-p.color-accent.dark-gray-p
-  h1.f2.f1-ns.mt3.mb3: a.link.color-accent.dark-gray-p(href="/")!= person.name
+header.pv3.ph4.bg-accent.color-accent(class=site.printstyles ? 'dark-gray-p bg-white-p' : '')
+  h1.f2.f1-ns.mt3.mb3: a.link.color-accent(href="/", class=site.printstyles ? 'dark-gray-p' : '')!= person.name
   .w-100.cf.mt3
     ul.w-30-ns.w-30-p.fl-ns.fl-p.list.ml0.pl0.lh-title.mt0
       if person.email
-        li: a.link.color-accent.dark-gray-p.underline-hover(href='mailto:' + person.email)= person.email
+        li: a.link.color-accent.underline-hover(href='mailto:' + person.email, class=site.printstyles ? 'dark-gray-p' : '')= person.email
       if person.phone
         li= person.phone
       if person.location
         li= person.location
       if person.links
         each value, index in person.links
-          li: a.link.color-accent.dark-gray-p.underline-hover(href=value)= index
+          li: a.link.color-accent.underline-hover(href=value, class=site.printstyles ? 'dark-gray-p' : '')= index
     .w-70-ns.w-70-p.fr-ns.fr-p
       if person.intro
         p.measure.lh-title.mt0!= person.intro

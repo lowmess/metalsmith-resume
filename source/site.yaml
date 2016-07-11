@@ -1,6 +1,12 @@
 title: The Resume of Thomas A. Anderson (The One)
 description: Prophesized by The Oracle to be The One, Thomas A. Anderson freed humanity from the Matrix and ended the Machine War.
+# theme color for header, borders, etc
 theme: '#0074D9'
+# of work experiences to show
 jobs: 3
+# of educational experiences to show
 schools: 1
+# show 'References available' link in footer
 references: true
+# Remove theme color on print
+printstyles: false
