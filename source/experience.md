@@ -1,4 +1,4 @@
 ---
-title: Work
+title: Experience
 layout: collection.pug
 ---

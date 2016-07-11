@@ -1,49 +1,26 @@
 // Metalsmith
 var Metalsmith = require('metalsmith')
 var permalinks = require('metalsmith-permalinks')
-// HTML
-var layouts = require('metalsmith-layouts')
-var markdown = require('metalsmith-markdownit')
+var metadata = require('metalsmith-metadata')
 var collections = require('metalsmith-collections')
+// HTML
+var markdown = require('metalsmith-markdownit')
+var layouts = require('metalsmith-layouts')
 
 var siteBuild = Metalsmith(__dirname)
   .source('source')
   .destination('_build')
-  .metadata({
-    global: {
-      title: 'The Resume of Thomas A. Anderson (The One)',
-      description: 'Prophesized by The Oracle to be The One, Thomas A. Anderson freed humanity from the Matrix and ended the Machine War.',
-      theme: '#2ecc71'
-    },
-    person: {
-      name: 'Thomas A. Anderson',
-      title: 'The One',
-      site: 'http://matrix.wikia.com/wiki/Neo',
-      sitename: 'Biography',
-      email: 'alec.lomas@meltmedia.com',
-      phone: '(312) 555-0690',
-      location: '???',
-      social: {
-        text: '@neo',
-        url: 'twitter.com/neo'
-      },
-      proficiencies: [
-        'Hacking',
-        'Creative entrepeneurship',
-        'Martial arts',
-        'Negotiations',
-        'Hovercraft piloting'
-      ]
-    }
-  })
-  // HTML
+  .use(metadata({
+    'site': 'site.yaml',
+    'person': 'person.yaml'
+  }))
   .use(collections({
     education: {
       pattern: 'education/**/*.md',
       sortBy: 'startDate',
       reverse: true
     },
-    work: {
+    experience: {
       pattern: 'experience/**/*.md',
       sortBy: 'startDate',
       reverse: true
@@ -52,6 +29,7 @@ var siteBuild = Metalsmith(__dirname)
       pattern: '*.md'
     }
   }))
+  // HTML
   .use(markdown({
     html: true,
     xhtmlOut: true,

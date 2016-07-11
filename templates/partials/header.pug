@@ -1,14 +1,20 @@
-header
-  h1.f2.f1-ns.mt3: a.link.dark-gray(href="/")!= person.name
-  h2= person.title
-  ul.list
-    if person.site
-      li: a.link(href=person.site)= (person.sitename ? person.sitename : person.site)
-    if person.email
-      li: a.link(href='mailto:' + person.email)= person.email
-    if person.phone
-      li= person.phone
-    if person.location
-      li= person.location
-    if person.social.text && person.social.url
-      li: a.link(href=person.social.url)= person.social.text
+header.pv3.ph4.bg-olive.white
+  .cf
+    .w-75-ns.fr-ns
+      h1.f2.f1-ns.mt3.mb0: a.link.white.hover-light-gray(href="/")!= person.name
+      //- if person.title
+        h2.mt0.mb1= person.title
+  .w-100.cf.mt0
+    ul.w-25-ns.fl-ns.pr4.list.ml0.pl0.lh-title
+      if person.email
+        li: a.link.white.underline-hover(href='mailto:' + person.email)= person.email
+      if person.phone
+        li= person.phone
+      if person.location
+        li= person.location
+      if person.links
+        each value, index in person.links
+          li: a.link.white.underline-hover(href=value)= index
+    .w-75-ns.fr-ns
+      if person.intro
+        p.measure.lh-title!= person.intro

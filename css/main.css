@@ -7,5 +7,7 @@
 @import 'tachyons-border-colors/css/tachyons-border-colors.css';
 @import 'tachyons-columns/src/tachyons-columns.css';
 
+@import 'colors.css/src/colors.css';
+
 /* layout */
 @import 'page';

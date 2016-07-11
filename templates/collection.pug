@@ -3,8 +3,8 @@ extends default
 block content
 
   h2= title
-  if title == 'Work'
-    for job in collections.work
+  if title == 'Experience'
+    for job in collections.experience
       +experience(job)
   else if title == 'Education'
     for school in collections.education

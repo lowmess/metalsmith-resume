@@ -1,20 +1,20 @@
 meta(charset="UTF-8")
 meta(content="width=device-width, initial-scale=1", name="viewport")
 meta(http-equiv="X-UA-Compatible", content="IE=edge")
-meta(name="theme-color", content=global.theme)
+meta(name="theme-color", content=site.theme)
 
-meta(name="description", content=global.description)
+meta(name="description", content=site.description)
 
 //- Open Graph / Twitter Card
-if person.social.twitter
-  meta(name="twitter:site", content=person.social.twitter)
+if person.twitter
+  meta(name="twitter:site", content=person.twitter)
 meta(name="twitter:card", content="summary")
-meta(property="og:title", name="twitter:title", content=global.title)
+meta(property="og:title", name="twitter:title", content=site.title)
 meta(property="og:url", content=path)
-//- meta(property="og:image", content=global.logo)
-meta(property="og:description", name="twitter:description", content=global.description)
+//- meta(property="og:image", content=site.logo)
+meta(property="og:description", name="twitter:description", content=site.description)
 
-title= global.title
+title= site.title
 
 link(rel="stylesheet", type="text/css", href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic,800,800italic,600,600italic")
 link(rel="stylesheet", type="text/css", href="/css/main.css")

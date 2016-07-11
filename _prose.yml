@@ -1,6 +1,6 @@
 prose:
   rooturl: 'source'
-  ignore: ['index.md', '404.md', 'work.md', 'education.md', 'scripts', 'stylesheets']
+  ignore: ['index.md', '404.md', 'work.md', 'education.md']
   media: 'source/images'
   metadata:
     'source/work':

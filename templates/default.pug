@@ -5,35 +5,37 @@ head
   include partials/head
 
 body.bg-white.bg-light-gray-page.bg-white-print
-  article.pv3.ph4.bg-white.dark-gray.mw-page.mv-5-page.mh-auto-page.m0-print.shadow-2-page.shadow-none-print
+  article.mw-page.mv-5-page.mh-auto-page.m0-print.shadow-2-page.shadow-none-print
     include partials/header
 
-    main.content
+    main.pv3.ph4.bg-white.dark-gray
       block content
 
-        section.work.cf
-          .w-25-ns.fl-ns.tr-ns.pr4
-            h3.f4.f5-ns.fw7.mt2.mb0.ttu: a.link.dark-gray.underline-hover(href="/work") Experience
-          .w-75-ns.fr-ns
-            each job in [collections.work[0], collections.work[1], collections.work[2]]
-              +experience(job)
+        if site.jobs > 0
+          section.work.cf
+            .w-25-ns.fl-ns.pr4
+              h3.f4.f5-ns.fw7.mt2.mb0.ttu: a.link.dark-gray.underline-hover(href="/work") Experience
+            .w-75-ns.fr-ns
+              - for (var i = 0; i < site.jobs; i++)
+                +experience(collections.experience[i])
 
-        section.education.cf
-          .w-25-ns.fl-ns.tr-ns.pr4
-            h3.f4.f5-ns.fw7.mt2.mb0.ttu: a.link.dark-gray.underline-hover(href="/education") Education
-          .w-75-ns.fr-ns
-            - var school = collections.education[0]
-            +experience(school)
+        if site.schools > 0
+          section.education.cf
+            .w-25-ns.fl-ns.pr4
+              h3.f4.f5-ns.fw7.mt2.mb0.ttu: a.link.dark-gray.underline-hover(href="/education") Education
+            .w-75-ns.fr-ns
+              - for (var i = 0; i < site.schools; i++)
+                +experience(collections.education[i])
 
-        if person.proficiencies
+        if person.proficiencies.length > 0
           section.skills.cf
-            .w-25-ns.fl-ns.tr-ns.pr4
+            .w-25-ns.fl-ns.pr4
               h3.f4.f5-ns.fw7.mt2.mb0.ttu Proficiencies
-            ul.cc2-ns.cg4-ns.pl4.pl3-ns.w-75-ns.fr-ns.mt2
+            ul.cc2-ns.cg4-ns.pl4.pl3-ns.w-75-ns.fr-ns.mt2.lh-title
               each skill in person.proficiencies
                 li= skill
 
-        if person.email
+        if person.email && site.references
           footer.mt3
             hr.w5.ba.b--light-gray.ml0
             p: a.link.dark-gray.underline-hover(href='mailto:' + person.email) References available upon request
