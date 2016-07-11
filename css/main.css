@@ -7,6 +7,7 @@
 /* Variables */
 @import 'tachyons-colors/src/tachyons-colors.css';
 /* Modules */
+@import 'tachyons-base/src/tachyons-base.css';
 @import 'tachyons-box-sizing/src/tachyons-box-sizing.css';
 @import 'tachyons-background-size/src/tachyons-background-size.css';
 @import 'tachyons-borders/src/tachyons-borders.css';

@@ -57,6 +57,7 @@
     "postcss-uncss": "0.0.1",
     "pug": "^2.0.0-alpha8",
     "tachyons-background-size": "^4.0.0",
+    "tachyons-base": "^1.2.3",
     "tachyons-border-colors": "^4.1.0",
     "tachyons-border-radius": "^4.2.0",
     "tachyons-border-style": "^3.0.2",
@@ -66,6 +67,7 @@
     "tachyons-box-sizing": "^3.1.2",
     "tachyons-clears": "^2.2.0",
     "tachyons-colors": "^5.1.2",
+    "tachyons-columns": "^1.0.0",
     "tachyons-coordinates": "^3.0.1",
     "tachyons-debug": "^1.1.2",
     "tachyons-display": "^4.1.0",
@@ -101,8 +103,6 @@
     "tachyons-white-space": "^3.0.2",
     "tachyons-widths": "^4.0.2",
     "tachyons-word-break": "2.0.0",
-    "tachyons-border-colors": "^4.1.0",
-    "tachyons-columns": "^1.0.0",
     "uncss": "^0.13.0"
   }
 }
