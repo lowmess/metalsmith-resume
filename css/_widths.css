@@ -1,0 +1,47 @@
+@custom-media --breakpoint-not-small screen and (min-width: 48em);
+@custom-media --breakpoint-medium screen and (min-width: 48em) and (max-width: 64em);
+@custom-media --breakpoint-large screen and (min-width: 64em);
+/*
+
+   WIDTHS
+
+   Base:
+     w = width
+
+   Modifiers
+     -30  = literal value 30%
+     -70  = literal value 70%
+
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+
+*/
+/* Width Scale */
+.w-30 { width: 30%; }
+.w-70 { width: 70%; }
+
+@media (--breakpoint-not-small) {
+  .w-30-ns { width: 30%; }
+
+  .w-70-ns { width: 70%; }
+}
+
+@media (--breakpoint-medium) {
+  .w-30-m { width: 30%; }
+
+  .w-70-m { width: 70%; }
+}
+
+@media (--breakpoint-large) {
+  .w-30-l { width: 30%; }
+
+  .w-70-l { width: 70%; }
+}
+
+@media print {
+  .w-30-p { width: 30%; }
+
+  .w-70-p { width: 70%; }
+}

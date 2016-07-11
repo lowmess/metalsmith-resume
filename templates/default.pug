@@ -4,38 +4,34 @@ include mixins
 head
   include partials/head
 
-body.bg-white.bg-light-gray-page.bg-white-print
-  article.mw-page.mv-5-page.mh-auto-page.m0-print.shadow-2-page.shadow-none-print
+body.bg-white.bg-light-gray-page.bg-white-p.sans-serif
+  article.mw-page.mv-5-page.mh-auto-page.m0-p.shadow-2-page.shadow-none-p
     include partials/header
 
     main.pv3.ph4.bg-white.dark-gray
       block content
 
         if site.jobs > 0
-          section.work.cf
-            .w-25-ns.fl-ns.pr4
-              h3.f4.f5-ns.fw7.mt2.mb0.ttu: a.link.dark-gray.underline-hover(href="/work") Experience
-            .w-75-ns.fr-ns
-              - for (var i = 0; i < site.jobs; i++)
-                +experience(collections.experience[i])
+          h3.f5.fw7.mv2.ttu: a.link.dark-gray.underline-hover(href="/experience") Experience
+          section.work
+            - for (var i = 0; i < site.jobs; i++)
+              +experience(collections.experience[i])
 
         if site.schools > 0
-          section.education.cf
-            .w-25-ns.fl-ns.pr4
-              h3.f4.f5-ns.fw7.mt2.mb0.ttu: a.link.dark-gray.underline-hover(href="/education") Education
-            .w-75-ns.fr-ns
-              - for (var i = 0; i < site.schools; i++)
-                +experience(collections.education[i])
+          h3.f5.fw7.mv2.ttu: a.link.dark-gray.underline-hover(href="/education") Education
+          section.education
+            - for (var i = 0; i < site.schools; i++)
+              +experience(collections.education[i])
 
         if person.proficiencies.length > 0
           section.skills.cf
-            .w-25-ns.fl-ns.pr4
-              h3.f4.f5-ns.fw7.mt2.mb0.ttu Proficiencies
-            ul.cc2-ns.cg4-ns.pl4.pl3-ns.w-75-ns.fr-ns.mt2.lh-title
+            .w-30-ns.w-30-p.fl-ns.fl-p
+              h3.f5.fw7.mt2.mb0.ttu Proficiencies
+            ul.cc2-ns.cg3-ns.pl0.w-70-ns.w-70-p.fr-ns.fr-p.mt2.lh-title.list-inside-ns
               each skill in person.proficiencies
                 li= skill
 
         if person.email && site.references
           footer.mt3
-            hr.w5.ba.b--light-gray.ml0
+            hr.w5.ba.b--accent.ml0
             p: a.link.dark-gray.underline-hover(href='mailto:' + person.email) References available upon request

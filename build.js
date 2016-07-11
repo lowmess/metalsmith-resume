@@ -44,6 +44,7 @@ var siteBuild = Metalsmith(__dirname)
     engine: 'pug',
     pretty: true,
     moment: require('moment'),
+    contrast: require('get-contrast'),
     directory: 'templates',
     default: 'default.pug',
     pattern: '**/*.html'

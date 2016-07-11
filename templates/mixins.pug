@@ -1,23 +1,27 @@
 mixin experience(exp)
-  section.experience
-    h5.f6.f5-ns.ttu.tracked.fw2.mv2
-        time(datetime=moment.utc(exp.startDate))= moment.utc(exp.startDate).format("MMM YYYY")
-        | &#032;&ndash;&#032;
-        if exp.endDate
-          time(datetime=moment.utc(exp.endDate))= moment.utc(exp.endDate).format("MMM YYYY")
+  section.experience.cf
+    .w-30-ns.w-30-p.fl-ns.fl-p
+      //- Time
+      h5.f5.ttu.fw2.mt2.mb1
+          time(datetime=moment.utc(exp.startDate))= moment.utc(exp.startDate).format("MMM YYYY")
+          | &#032;&ndash;&#032;
+          if exp.endDate
+            time(datetime=moment.utc(exp.endDate))= moment.utc(exp.endDate).format("MMM YYYY")
+          else
+            | Current
+      //- Location
+      if exp.location
+        h5.f5.ttu.fw2.mt1.mb1= exp.location
+    .w-70-ns.w-70-p.fr-ns.fr-p
+      //- Subtitle
+      h4.f5.mt1.mt2-ns.mb1.fw4.ttu= exp.subtitle
+      //- Title
+      h3.f3.mt1.mb2.fw7
+        if exp.url
+          a.link.dark-gray.underline-hover(href=exp.url)= exp.title
         else
-          | Current
-    //- Title
-    h3.f4.f3-ns.mt2.mb0.fw7
-      if exp.url
-        a.link.dark-gray.underline-hover(href=exp.url)= exp.title
-      else
-        = exp.title
-    //- Subtitle
-    h4.f5.f4-ns.mt0.mb2.fw4= exp.subtitle
-    //- Location
-    if exp.location
-      h5.f6.f5-ns.fw2.mv2= exp.location
-    //- Contents
-    .measure.lh-title.mt3.mb4
-      != exp.contents
+          = exp.title
+
+      //- Contents
+      .measure.lh-title.mt2.mb4.f6
+        != exp.contents

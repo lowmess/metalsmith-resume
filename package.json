@@ -37,6 +37,7 @@
     "browser-sync": "^2.12.10",
     "colors.css": "^3.0.0",
     "cssnano": "^3.7.1",
+    "get-contrast": "^2.0.0",
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-layouts": "^1.6.5",

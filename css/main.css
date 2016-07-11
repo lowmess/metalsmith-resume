@@ -10,4 +10,6 @@
 @import 'colors.css/src/colors.css';
 
 /* layout */
-@import 'page';
+@import '_page';
+@import '_widths';
+@import '_list';

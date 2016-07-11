@@ -11,10 +11,35 @@ if person.twitter
 meta(name="twitter:card", content="summary")
 meta(property="og:title", name="twitter:title", content=site.title)
 meta(property="og:url", content=path)
-//- meta(property="og:image", content=site.logo)
 meta(property="og:description", name="twitter:description", content=site.description)
 
 title= site.title
+
+//- Create theme color classes:
+-
+  var themecolor = site.theme
+
+  function getTextColor () {
+    var darkgray = '#333333'
+    var white = '#ffffff'
+
+    if (contrast.ratio(themecolor, white) > 4) {
+      return white
+    } else {
+      return darkgray
+    }
+  }
+
+style.
+  .bg-accent {
+    background-color: #{themecolor};
+  }
+  .color-accent {
+    color: #{getTextColor()};
+  }
+  .b--accent {
+    border-color: #{themecolor};
+  }
 
 link(rel="stylesheet", type="text/css", href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic,800,800italic,600,600italic")
 link(rel="stylesheet", type="text/css", href="/css/main.css")

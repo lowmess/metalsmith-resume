@@ -1,0 +1,31 @@
+@custom-media --breakpoint-not-small screen and (min-width: 48em);
+@custom-media --breakpoint-medium screen and (min-width: 48em) and (max-width: 64em);
+@custom-media --breakpoint-large screen and (min-width: 64em);
+
+.list-inside {
+  list-style-position: inside;
+}
+
+@media (--breakpoint-not-small) {
+  .list-inside-ns {
+    list-style-position: inside;
+  }
+}
+
+@media (--breakpoint-medium) {
+  .list-inside-m {
+    list-style-position: inside;
+  }
+}
+
+@media (--breakpoint-large) {
+  .list-inside-l {
+    list-style-position: inside;
+  }
+}
+
+@media print {
+  .list-inside-p {
+    list-style-position: inside;
+  }
+}

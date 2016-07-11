@@ -3,6 +3,7 @@
   --page-width: 8.5in;
 
   /* Colors from Tachyons */
+  --dark-gray: #333333;
   --light-gray: #eeeeee;
   --white: #ffffff;
 
@@ -18,8 +19,6 @@
 .mw-page { max-width: var(--page-width); }
 
 @media (--breakpoint-page) {
-  .bg-light-gray-page { background-color: var(--light-gray); }
-
   .mv-5-page {
     margin-top: var(--spacing-extra-large);
     margin-bottom: var(--spacing-extra-large);
@@ -30,13 +29,26 @@
     margin-right: auto;
   }
 
+  .bg-light-gray-page { background-color: var(--light-gray); }
+
   .shadow-2-page { box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2); }
 }
 
 @media print {
-  .m0-print { margin: 0; }
+  @page {
+    size: letter portrait;
+    margin: 0;
+  }
 
-  .bg-white-print { background-color: var(--white); }
+  .fl-p { float: left; }
 
-  .shadow-none-print { box-shadow: none; }
+  .fr-p { float: right; }
+
+  .m0-p { margin: 0; }
+
+  .bg-white-p { background-color: var(--white); }
+
+  .dark-gray-p { color: var(--dark-gray); }
+
+  .shadow-none-p { box-shadow: none; }
 }
