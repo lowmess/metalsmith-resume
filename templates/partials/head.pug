@@ -23,8 +23,19 @@ title= site.title
     var darkgray = '#333333'
     var white = '#ffffff'
 
-    if (contrast.ratio(themecolor, white) > 4) {
+    if (contrast.ratio(themecolor, white) > 3.5) {
       return white
+    } else {
+      return darkgray
+    }
+  }
+
+  function getAccentColor () {
+    var darkgray = '#333333'
+    var white = '#ffffff'
+
+    if (contrast.ratio(themecolor, white) > 3.5) {
+      return themecolor
     } else {
       return darkgray
     }
@@ -34,8 +45,11 @@ style.
   .bg-accent {
     background-color: #{themecolor};
   }
-  .color-accent {
+  .bg-accent-text {
     color: #{getTextColor()};
+  }
+  .accent {
+    color: #{getAccentColor()};
   }
   .b--accent {
     border-color: #{themecolor};

@@ -9,8 +9,8 @@
      w = width
 
    Modifiers
-     -30  = literal value 30%
-     -70  = literal value 70%
+     -33  = literal value 33%
+     -66  = literal value 66%
 
    Media Query Extensions:
      -ns = not-small
@@ -19,29 +19,22 @@
 
 */
 /* Width Scale */
-.w-30 { width: 30%; }
-.w-70 { width: 70%; }
+.w-66 { width: 66%; }
 
 @media (--breakpoint-not-small) {
-  .w-30-ns { width: 30%; }
-
-  .w-70-ns { width: 70%; }
+  .w-66-ns { width: 66%; }
 }
 
 @media (--breakpoint-medium) {
-  .w-30-m { width: 30%; }
-
-  .w-70-m { width: 70%; }
+  .w-66-m { width: 66%; }
 }
 
 @media (--breakpoint-large) {
-  .w-30-l { width: 30%; }
-
-  .w-70-l { width: 70%; }
+  .w-66-l { width: 66%; }
 }
 
 @media print {
-  .w-30-p { width: 30%; }
+  .w-33-p { width: 33%; }
 
-  .w-70-p { width: 70%; }
+  .w-66-p { width: 66%; }
 }

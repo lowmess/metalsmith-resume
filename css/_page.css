@@ -44,7 +44,7 @@
 
   .fr-p { float: right; }
 
-  .m0-p { margin: 0; }
+  .mt0-p { margin-top: 0; }
 
   .bg-white-p { background-color: var(--white); }
 

@@ -12,26 +12,26 @@ body.bg-white.bg-light-gray-page.bg-white-p.sans-serif
       block content
 
         if site.jobs > 0
-          h3.f5.fw7.mt2.mb3.ttu: a.link.dark-gray.underline-hover(href="/experience") Experience
-          section.work
+          h3.f5.fw7.mt2.mb0.ttu: a.link.accent.underline-hover(href="/experience") Experience
+          section.work.cf.mb3
             - for (var i = 0; i < site.jobs; i++)
               +experience(collections.experience[i])
 
         if site.schools > 0
-          h3.f5.fw7.mt2.mb3.ttu: a.link.dark-gray.underline-hover(href="/education") Education
-          section.education
+          h3.f5.fw7.mt2.mb0.ttu: a.link.accent.underline-hover(href="/education") Education
+          section.education.cf.mb3
             - for (var i = 0; i < site.schools; i++)
               +experience(collections.education[i])
 
         if person.proficiencies.length > 0
-          section.skills.cf
-            .w-30-ns.w-30-p.fl-ns.fl-p
-              h3.f5.fw7.mt2.mb3.ttu Proficiencies
-            ul.cc2-ns.cg3-ns.pl0.w-70-ns.w-70-p.fr-ns.fr-p.mt2.lh-title.list-inside-ns
+          section.skills.cf.mb3
+            .w-33-ns.w-33-p.fl-ns.fl-p
+              h3.f5.fw7.mt2.mb3.ttu.accent Proficiencies
+            ul.cc2-ns.cg3-ns.pl0.w-66-ns.w-66-p.fr-ns.fr-p.mt3.mt0-ns.mt0-p.lh-title.list-inside-ns
               each skill in person.proficiencies
                 li= skill
 
         if person.email && site.references
-          footer.mt3
+          footer.mt4
             hr.w4.ba.b--accent.bw1.ml0
             p: a.link.dark-gray.underline-hover(href='mailto:' + person.email) References available upon request

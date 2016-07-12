@@ -1,5 +1,5 @@
 ---
-title: Zion
+title: City of Zion
 published: true
 url: 'http://matrix.wikia.com/wiki/Zion'
 subtitle: The One
