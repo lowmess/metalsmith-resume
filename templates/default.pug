@@ -8,17 +8,17 @@ body.bg-white.bg-light-gray-page.bg-white-p.sans-serif
   article.mw-page.mv-5-page.mh-auto-page.m0-p.shadow-2-page.shadow-none-p
     include partials/header
 
-    main.pv3.ph4.bg-white.dark-gray
+    main.pa4.bg-white.dark-gray
       block content
 
         if site.jobs > 0
-          h3.f5.fw7.mv2.ttu: a.link.dark-gray.underline-hover(href="/experience") Experience
+          h3.f5.fw7.mt2.mb3.ttu: a.link.dark-gray.underline-hover(href="/experience") Experience
           section.work
             - for (var i = 0; i < site.jobs; i++)
               +experience(collections.experience[i])
 
         if site.schools > 0
-          h3.f5.fw7.mv2.ttu: a.link.dark-gray.underline-hover(href="/education") Education
+          h3.f5.fw7.mt2.mb3.ttu: a.link.dark-gray.underline-hover(href="/education") Education
           section.education
             - for (var i = 0; i < site.schools; i++)
               +experience(collections.education[i])
@@ -26,7 +26,7 @@ body.bg-white.bg-light-gray-page.bg-white-p.sans-serif
         if person.proficiencies.length > 0
           section.skills.cf
             .w-30-ns.w-30-p.fl-ns.fl-p
-              h3.f5.fw7.mt2.mb0.ttu Proficiencies
+              h3.f5.fw7.mt2.mb3.ttu Proficiencies
             ul.cc2-ns.cg3-ns.pl0.w-70-ns.w-70-p.fr-ns.fr-p.mt2.lh-title.list-inside-ns
               each skill in person.proficiencies
                 li= skill

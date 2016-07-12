@@ -2,7 +2,7 @@ extends default
 
 block content
 
-  h3.f5.fw7.mv2.ttu= title
+  h3.f5.fw7.mt2.mb3.ttu= title
   if title == 'Experience'
     for job in collections.experience
       +experience(job)
@@ -11,5 +11,5 @@ block content
       +experience(school)
 
   footer.mt3
-    hr.w5.ba.b--accent.ml0
+    hr.w4.ba.b--accent.bw1.ml0
     p: a.link.dark-gray.underline-hover(href='/') Back to Full Resume

@@ -6,5 +6,4 @@ endDate: 1989-05-31
 location: Capitol City, USA
 ---
 
-* Excelled in science, math and computer courses and displayed an aptitude for literature and history
-* Became a respected member of the school community through his involvement in football and hockey
+Excelled in science, math and computer courses, and displayed an aptitude for literature and history. Became a respected member of the school community through involvement in football and hockey.

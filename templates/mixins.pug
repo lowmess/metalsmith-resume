@@ -1,27 +1,27 @@
 mixin experience(exp)
-  section.experience.cf
-    .w-30-ns.w-30-p.fl-ns.fl-p
+  section.experience.cf.mb3
+    .w-30-ns.w-30-p.fl-ns.fl-p.mt1.mt2-ns
       //- Time
-      h5.f5.ttu.fw2.mt2.mb1
+      h5.f5.ttu.fw2.mb1
           time(datetime=moment.utc(exp.startDate))= moment.utc(exp.startDate).format("MMM YYYY")
           | &#032;&ndash;&#032;
           if exp.endDate
             time(datetime=moment.utc(exp.endDate))= moment.utc(exp.endDate).format("MMM YYYY")
           else
-            | Current
+            | Present
       //- Location
       if exp.location
         h5.f5.ttu.fw2.mt1.mb1= exp.location
-    .w-70-ns.w-70-p.fr-ns.fr-p
+    .w-70-ns.w-70-p.fr-ns.fr-p.mt1.mt2-ns
       //- Subtitle
-      h4.f5.mt1.mt2-ns.mb1.fw4.ttu= exp.subtitle
+      h4.f5.mb1.fw2.ttu= exp.subtitle
       //- Title
-      h3.f3.mt1.mb2.fw7
+      h3.f3.mt1.mb2.fw5
         if exp.url
           a.link.dark-gray.underline-hover(href=exp.url)= exp.title
         else
           = exp.title
 
       //- Contents
-      .measure.lh-title.mt2.mb4.f6
+      .measure.lh-title.mt2.f6
         != exp.contents

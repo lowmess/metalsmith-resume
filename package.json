@@ -11,7 +11,8 @@
     "browser_sync": "browser-sync start --server _build --no-ui --no-notify",
     "build:html": "node build.js",
     "build:css": "postcss -c postcss.json -o _build/css/main.css --no-map.inline css/main.css",
-    "build": "npm run build:html && npm run build:css"
+    "build": "npm run build:html && npm run build:css",
+    "deploy": "npm run build && surge _build metalsmith-resume.lowmess.com"
   },
   "repository": {
     "type": "git",

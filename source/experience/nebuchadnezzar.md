@@ -7,5 +7,4 @@ endDate: 2199-09-18
 location: Reality
 ---
 
-* Mastered the Martial Arts (all of them)
-* Gained prolific knowledge of weapons & vehicles
+Learned the truth about reality. Gained the ability to bend the rules of the Matrix. Regularly commuted between realities.
