@@ -7,6 +7,12 @@ prose:
       - name: 'title'
         field:
           element: 'text'
+          label: 'Job Title'
+          placeholder: 'Software Programmer'
+          type: 'text'
+      - name: 'subtitle'
+        field:
+          element: 'text'
           label: 'Workplace'
           placeholder: 'MetaCortex'
           type: 'text'
@@ -15,12 +21,6 @@ prose:
           element: 'text'
           label: 'Workplace website'
           placeholder: 'http://metacortex.info'
-          type: 'text'
-      - name: 'subtitle'
-        field:
-          element: 'text'
-          label: 'Job Title'
-          placeholder: 'Software Programmer'
           type: 'text'
       - name: 'startDate'
         field:
@@ -45,6 +45,12 @@ prose:
       - name: 'title'
         field:
           element: 'text'
+          label: 'Degree'
+          placeholder: 'B.S., Computer Science'
+          type: 'text'
+      - name: 'subtitle'
+        field:
+          element: 'text'
           label: 'Institution'
           placeholder: 'University of Chicago'
           type: 'text'
@@ -53,12 +59,6 @@ prose:
           element: 'text'
           label: 'Institution website'
           placeholder: 'http://uchicago.edu'
-          type: 'text'
-      - name: 'subtitle'
-        field:
-          element: 'text'
-          label: 'Degree'
-          placeholder: 'B.S., Computer Science'
           type: 'text'
       - name: 'startDate'
         field:

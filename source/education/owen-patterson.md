@@ -1,6 +1,6 @@
 ---
-title: Owen Patterson H.S.
-subtitle: High School Diploma
+title: High School Diploma
+subtitle: Owen Patterson H.S.
 startDate: 1985-08-11
 endDate: 1989-05-31
 location: Capitol City, USA

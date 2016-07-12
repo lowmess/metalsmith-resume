@@ -23,7 +23,7 @@ title= site.title
     var darkgray = '#333333'
     var white = '#ffffff'
 
-    if (contrast.ratio(themecolor, white) > 3.5) {
+    if (contrast.ratio(themecolor, white) >= 3.5) {
       return white
     } else {
       return darkgray
@@ -34,7 +34,7 @@ title= site.title
     var darkgray = '#333333'
     var white = '#ffffff'
 
-    if (contrast.ratio(themecolor, white) > 3.5) {
+    if (contrast.ratio(themecolor, white) >= 3.5) {
       return themecolor
     } else {
       return darkgray
