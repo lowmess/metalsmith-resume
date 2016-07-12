@@ -37,6 +37,7 @@
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.12.10",
     "colors.css": "^3.0.0",
+    "css-mqpacker": "^5.0.1",
     "cssnano": "^3.7.1",
     "get-contrast": "^2.0.0",
     "metalsmith": "^2.1.0",

@@ -1,6 +1,6 @@
 header.pa4.bg-accent.bg-accent-text(class=site.printstyles ? 'dark-gray-p bg-white-p' : '')
-  h1.f2.f1-ns.mt3.mb3: a.link.bg-accent-text(href="/", class=site.printstyles ? 'dark-gray-p' : '')!= person.name
-  .w-100.cf.mt3
+  h1.f2.f1-ns.lh-title.mb2: a.link.bg-accent-text(href="/", class=site.printstyles ? 'dark-gray-p' : '')!= person.name
+  .w-100.cf.mt2
     ul.w-33-ns.w-33-p.fl-ns.fl-p.list.ml0.pl0.lh-title.mt0.f5
       if person.email
         li: a.link.bg-accent-text.underline-hover(href='mailto:' + person.email, class=site.printstyles ? 'dark-gray-p' : '')= person.email

@@ -1,7 +1,10 @@
 # SEO / <meta> tag information
 title: The Resume of Thomas A. Anderson (The One)
 description: Prophesized by The Oracle to be The One, Thomas A. Anderson freed humanity from the Matrix and ended the Machine War.
-# theme color for header, borders, etc
+# theme color for header, borders, section headings
+# For best results, choose a color that has a color ratio of at least 3.5
+# against white. Otherwise, all text etc is set to black to preserve readability
+# @link http://leaverou.github.io/contrast-ratio/
 theme: '#0074D9'
 # of work experiences to show
 jobs: 3
@@ -11,3 +14,5 @@ schools: 1
 references: true
 # Remove theme color on print
 printstyles: false
+# Show promo link under resume (you probably want to set this to false)
+promolink: true

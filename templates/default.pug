@@ -4,11 +4,11 @@ include mixins
 head
   include partials/head
 
-body.bg-white.bg-light-gray-page.bg-white-p.sans-serif
-  article.mw-page.mv-5-page.mh-auto-page.m0-p.shadow-2-page.shadow-none-p
+body.bg-white.bg-light-gray-page.bg-white-p.sans-serif.dark-gray
+  article.mw-page.mv-5-page.center.m0-p.shadow-2-page.shadow-none-p
     include partials/header
 
-    main.pa4.bg-white.dark-gray
+    main.pa4.bg-white
       block content
 
         if site.jobs > 0
@@ -35,3 +35,7 @@ body.bg-white.bg-light-gray-page.bg-white-p.sans-serif
           footer.mt4
             hr.w4.ba.b--accent.bw1.ml0
             p: a.link.dark-gray.underline-hover(href='mailto:' + person.email) References available upon request
+
+  if site.promolink
+    article.pb4.tc
+      p.lh-title Made with <a href="https://github.com/lowmess/metalsmith-resume" class="accent link underline-hover">Metalsmith Resume</a> by <a href="https://github.com/lowmess/" class="accent link underline-hover">@lowmess</a>
