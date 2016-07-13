@@ -3,6 +3,8 @@ var Metalsmith = require('metalsmith')
 var permalinks = require('metalsmith-permalinks')
 var metadata = require('metalsmith-metadata')
 var collections = require('metalsmith-collections')
+var drafts = require('metalsmith-drafts')
+var defaults = require('metalsmith-default-values')
 // HTML
 var markdown = require('metalsmith-markdownit')
 var layouts = require('metalsmith-layouts')
@@ -29,6 +31,12 @@ var siteBuild = Metalsmith(__dirname)
       pattern: '*.md'
     }
   }))
+  .use(defaults([{
+    pattern: '*/**/*.md',
+    defaults: {
+      draft: true
+    }
+  }]))
   // HTML
   .use(markdown({
     html: true,
@@ -49,6 +57,7 @@ var siteBuild = Metalsmith(__dirname)
     default: 'default.pug',
     pattern: '**/*.html'
   }))
+  .use(drafts())
 
 siteBuild.build(function (err) {
   if (err) {
