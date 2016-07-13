@@ -2289,6 +2289,11 @@
       "from": "isarray@1.0.0",
       "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz"
     },
+    "isemail": {
+      "version": "1.2.0",
+      "from": "isemail@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/isemail/-/isemail-1.2.0.tgz"
+    },
     "isexe": {
       "version": "1.1.2",
       "from": "isexe@>=1.1.1 <2.0.0",
@@ -2308,6 +2313,11 @@
       "version": "1.0.2",
       "from": "jodid25519@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/jodid25519/-/jodid25519-1.0.2.tgz"
+    },
+    "joi": {
+      "version": "6.10.1",
+      "from": "joi@>=6.0.0 <7.0.0",
+      "resolved": "https://registry.npmjs.org/joi/-/joi-6.10.1.tgz"
     },
     "js-base64": {
       "version": "2.1.9",
@@ -2738,6 +2748,16 @@
       "from": "lodash._baseflatten@>=4.2.0 <4.3.0",
       "resolved": "https://registry.npmjs.org/lodash._baseflatten/-/lodash._baseflatten-4.2.1.tgz"
     },
+    "lodash._baseset": {
+      "version": "4.3.0",
+      "from": "lodash._baseset@>=4.3.0 <4.4.0",
+      "resolved": "https://registry.npmjs.org/lodash._baseset/-/lodash._baseset-4.3.0.tgz"
+    },
+    "lodash._basetostring": {
+      "version": "4.12.0",
+      "from": "lodash._basetostring@>=4.12.0 <4.13.0",
+      "resolved": "https://registry.npmjs.org/lodash._basetostring/-/lodash._basetostring-4.12.0.tgz"
+    },
     "lodash._bindcallback": {
       "version": "3.0.1",
       "from": "lodash._bindcallback@>=3.0.0 <4.0.0",
@@ -2763,6 +2783,11 @@
       "from": "lodash._root@>=3.0.0 <3.1.0",
       "resolved": "https://registry.npmjs.org/lodash._root/-/lodash._root-3.0.1.tgz"
     },
+    "lodash._stringtopath": {
+      "version": "4.8.0",
+      "from": "lodash._stringtopath@>=4.8.0 <4.9.0",
+      "resolved": "https://registry.npmjs.org/lodash._stringtopath/-/lodash._stringtopath-4.8.0.tgz"
+    },
     "lodash.assign": {
       "version": "4.0.9",
       "from": "lodash.assign@>=4.0.3 <5.0.0",
@@ -2784,6 +2809,11 @@
           "resolved": "https://registry.npmjs.org/lodash.keys/-/lodash.keys-3.1.2.tgz"
         }
       }
+    },
+    "lodash.get": {
+      "version": "4.3.0",
+      "from": "lodash.get@>=4.0.1 <5.0.0",
+      "resolved": "https://registry.npmjs.org/lodash.get/-/lodash.get-4.3.0.tgz"
     },
     "lodash.isarguments": {
       "version": "3.0.8",
@@ -2819,6 +2849,11 @@
       "version": "3.6.1",
       "from": "lodash.restparam@>=3.0.0 <4.0.0",
       "resolved": "https://registry.npmjs.org/lodash.restparam/-/lodash.restparam-3.6.1.tgz"
+    },
+    "lodash.set": {
+      "version": "4.2.0",
+      "from": "lodash.set@>=4.0.0 <5.0.0",
+      "resolved": "https://registry.npmjs.org/lodash.set/-/lodash.set-4.2.0.tgz"
     },
     "longest": {
       "version": "1.0.1",
@@ -2970,6 +3005,16 @@
           "resolved": "https://registry.npmjs.org/uniq/-/uniq-0.0.2.tgz"
         }
       }
+    },
+    "metalsmith-default-values": {
+      "version": "0.0.2",
+      "from": "metalsmith-default-values@latest",
+      "resolved": "https://registry.npmjs.org/metalsmith-default-values/-/metalsmith-default-values-0.0.2.tgz"
+    },
+    "metalsmith-drafts": {
+      "version": "0.0.1",
+      "from": "metalsmith-drafts@latest",
+      "resolved": "https://registry.npmjs.org/metalsmith-drafts/-/metalsmith-drafts-0.0.1.tgz"
     },
     "metalsmith-layouts": {
       "version": "1.6.5",
@@ -4600,6 +4645,11 @@
       "version": "0.0.1",
       "from": "token-stream@0.0.1",
       "resolved": "https://registry.npmjs.org/token-stream/-/token-stream-0.0.1.tgz"
+    },
+    "topo": {
+      "version": "1.1.0",
+      "from": "topo@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/topo/-/topo-1.1.0.tgz"
     },
     "touch": {
       "version": "1.0.0",
