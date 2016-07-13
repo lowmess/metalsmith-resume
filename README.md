@@ -80,27 +80,6 @@ Contributions are welcome and encouraged:
 3. Open a PR that has a descriptive name (or a robust description)
 4. Feel good about yourself 🎉
 
-## Hosting
-
-As the whole resume site is a collection of static files, it can be hosted on just about any server. I do have a few preferences though. [2]
-
-### Netlify
-
-[Netlify](https://netlify.com) is my number one for a few reasons, the first being its set-it-and-forget-it nature. Just hook it up to your repo and it'll build every time you push to master (or every time you edit a file with Prose). It even comes with free SSL support through Let's Encrypt. Only downside: you have to pay to have a custom domain.
-
-### Surge
-
-[Surge](http://surge.sh) is a cheaper option if you can live without SSL (you have to pay more for it and it isn't as easy as Netlify's one-click solution). It does require you to build & deploy from the command line every time you make an update, but there's a helper `deploy` script in the [`package.json`](package.json#L16) (it's only like 50 characters long honestly). But, it's cheap and fast.
-
-### Github Pages
-
-Until Github opens up its [Pages](https://pages.github.com/) feature to build tools other than Jekyll (you know, like those [*other*](https://pages.gitlab.io/) guys), it's less than ideal for our purposes. That said, [it can definitely be done](https://help.github.com/articles/creating-project-pages-manually/).
-
-### Others
-
-There are plenty of other options that I have no experience with, like [Amazon S3](https://aws.amazon.com/s3/) and [Firebase](https://www.firebase.com/docs/hosting/).
-
 ***
 
 [1] For reference, this long-as-hell README is, like, six goddamn KBs. The whole generated site is [3.24kb gzipped](https://gtmetrix.com/reports/metalsmith-resume.lowmess.com/oQim8iPf).
-[2] I'm not a paid shill, promise. I just like these services. That being said, I certainly wouldn't turn down some free swag/service... 😏
