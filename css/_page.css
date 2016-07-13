@@ -37,6 +37,8 @@
     margin: 0;
   }
 
+  .dn-p { display: none; }
+
   .fl-p { float: left; }
 
   .fr-p { float: right; }
@@ -48,6 +50,4 @@
   .dark-gray-p { color: var(--dark-gray); }
 
   .shadow-none-p { box-shadow: none; }
-
-  .dn-p { display: none; }
 }

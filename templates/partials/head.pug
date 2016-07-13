@@ -41,6 +41,10 @@ title= site.title
     }
   }
 
+if process.env.NODE_ENV == 'print'
+  style.
+    html { font-size: 75%; }
+
 style.
   .bg-accent { background-color: #{themecolor}; }
   .bg-accent-text { color: #{getTextColor()}; }

@@ -12,6 +12,7 @@
     "build:html": "node build.js",
     "build:css": "postcss -c postcss.json -o _build/css/main.css --no-map.inline css/main.css",
     "build": "npm run build:html && npm run build:css",
+    "pdf": "NODE_ENV=print node build.js && npm run build:css && node pdf.js && npm run build",
     "deploy": "npm run build && surge _build metalsmith-resume.lowmess.com"
   },
   "repository": {
@@ -40,6 +41,7 @@
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.7.1",
     "get-contrast": "^2.0.0",
+    "html-pdf": "^2.0.1",
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-layouts": "^1.6.5",

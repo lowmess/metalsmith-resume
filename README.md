@@ -1,8 +1,6 @@
 # Metalsmith Resume
 
-Listen, writing resumes sucks. Microsoft Word and Adobe InDesign were not meant to be layout or content editing tools, respectively, and neither excel at managing information. I wanted to change that for myself, so I made [my resume](http://resume.lowmess.com) as a [Metalsmith](http://metalsmith.io) minisite. Then I made a better one to give away to everyone else. The math is simple: `markdown + YAML + git > those other things I just mentioned`.
-
-Get started:
+Listen, writing resumes sucks. Microsoft Word and Adobe InDesign were not meant to be layout or content editing tools, respectively, and neither excel at managing information. I wanted to change that for myself, so I made [my resume](http://resume.lowmess.com) as a [Metalsmith](http://metalsmith.io) minisite. Then I made a better one to give away to everyone else (this thing you're looking at now). The math is simple: `markdown + YAML + git > those other things I just mentioned`.
 
 ## Editing
 
@@ -11,8 +9,6 @@ Get started:
 3. Edit and add files
 4. ???
 5. Profit (hopefully literally)
-
-OK fine here's more.
 
 ### Adding Experiences
 
@@ -40,13 +36,28 @@ You can set your theme with the `theme` variable. I'll one again wait to let the
 
 #### Print Styles
 
-There is a setting called `printstyles`. This is probably a bad name. 🤔 I should update this name. Anyways, what it does is it makes everything black and white when you try and print the resume.
+There is a setting called `printstyles`. This is probably a bad name. I should update this name. 🤔 Anyways, what it does is it makes everything black and white when you try and print the resume.
+
+## Generating a PDF
+
+...is a much bigger headache than it would seem. You can always `cmd + p` and use the browser to save a PDF, but I built a nice generation function for you anyways. Unfortunately, it's a little jank right now. It uses [node-html-pdf](https://github.com/marcbachmann/node-html-pdf), which in turn uses [PhantomJS](http://phantomjs.org/), which causes some weird text zoom issue. So I have to:
+
+1. Rebuild the site with a print environment flag that applies a global font de-scalification
+2. Rebuild the global CSS
+3. Do the whole PDF generation thing (the whole point of this exercise)
+4. Rebuild the site *without* the print flag and also rebuild the global CSS again
+
+...it takes like, I dunno, 5 or 10 seconds? Which feels like *forever*. Anyways, you can generate a PDF with `npm run pdf` (or, again, just push `cmd + p` when you have it up and running).
 
 ## Development
 
 ### Installation
 
-Lads, it's `npm i`. (just make sure you're in the root directory of the project first)
+```
+git clone https://github.com/lowmess/metalsmith-resume.git
+cd metalsmith-resume
+npm i
+```
 
 ### Local Server
 
@@ -58,11 +69,11 @@ Lads, it's `npm i`. (just make sure you're in the root directory of the project 
 
 ### Styling
 
-This project uses [Tachyons](http://tachyons.io) to style everything (with a few custom classes added in for good measure). All modules are included in the build, which is then run through a few performance-enhancing PostCSS plugins (PEPP'rd) like [UnCSS](https://github.com/giakki/uncss) & [cssnano](http://cssnano.co/). As of right now, all the loaded CSS is [~3kb](http://cssstats.com/stats?url=http%3A%2F%2Fmetalsmith-resume.lowmess.com&ua=Browser%20Default), and that's pretty damn cool. 🤓
+This project uses [Tachyons](http://tachyons.io) (with a few custom classes added in for good measure). All modules are included in the build, which is then run through a few performance-enhancing PostCSS plugins (PEPP'rd) like [UnCSS](https://github.com/giakki/uncss) & [cssnano](http://cssnano.co/). As of right now, all the loaded CSS is [~3kb](http://cssstats.com/stats?url=http%3A%2F%2Fmetalsmith-resume.lowmess.com&ua=Browser%20Default), and that's pretty damn cool.[1] 🤓
 
 ## Contributing
 
-Contributions are welcome, as anything that makes my job easier is.
+Contributions are welcome and encouraged:
 
 1. Fork the project
 2. Make your changes
@@ -71,15 +82,15 @@ Contributions are welcome, as anything that makes my job easier is.
 
 ## Hosting
 
-As the whole resume site is a collection of static files, it can be hosted on just about any server. I do have a few preferences though. [1]
+As the whole resume site is a collection of static files, it can be hosted on just about any server. I do have a few preferences though. [2]
 
 ### Netlify
 
-[Netlify](https://netlify.com) is my number one for a few reasons, number one being it's set-it-and-forget it nature. Just hook it up to your repo and it'll build every time you push to master (or every time you edit a file with Prose). It even comes with free SSL support through Let's Encrypt. Only downside is you have to pay to have a custom domain.
+[Netlify](https://netlify.com) is my number one for a few reasons, the first being its set-it-and-forget-it nature. Just hook it up to your repo and it'll build every time you push to master (or every time you edit a file with Prose). It even comes with free SSL support through Let's Encrypt. Only downside: you have to pay to have a custom domain.
 
 ### Surge
 
-[Surge](http://surge.sh) is a cheaper option if you can live without SSL (they offer SSL, you just have to pay more for it and it isn't as easy as Netlify). It does require you to build & deploy from the command line every time you make an update, but there's a helper `deploy` script in the [`package.json`](package.json) (it's like 30 characters long honestly).
+[Surge](http://surge.sh) is a cheaper option if you can live without SSL (you have to pay more for it and it isn't as easy as Netlify's one-click solution). It does require you to build & deploy from the command line every time you make an update, but there's a helper `deploy` script in the [`package.json`](package.json#L16) (it's only like 50 characters long honestly). But, it's cheap and fast.
 
 ### Github Pages
 
@@ -91,4 +102,5 @@ There are plenty of other options that I have no experience with, like [Amazon S
 
 ***
 
-[1] I'm not a paid shill, promise. I just like these services. That being said, I certainly wouldn't turn down some free swag/service... 😏
+[1] For reference, this long-as-hell README is, like, six goddamn KBs. The whole generated site is [3.24kb gzipped](https://gtmetrix.com/reports/metalsmith-resume.lowmess.com/oQim8iPf).
+[2] I'm not a paid shill, promise. I just like these services. That being said, I certainly wouldn't turn down some free swag/service... 😏
