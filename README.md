@@ -43,9 +43,8 @@ There is a setting called `printstyles`. This is probably a bad name. I should u
 ...is a much bigger headache than it would seem. You can always `cmd + p` and use the browser to save a PDF, but I built a nice generation function for you anyways. Unfortunately, it's a little jank right now. It uses [node-html-pdf](https://github.com/marcbachmann/node-html-pdf), which in turn uses [PhantomJS](http://phantomjs.org/), which causes some weird text zoom issue. So I have to:
 
 1. Rebuild the site with a print environment flag that applies a global font de-scalification
-2. Rebuild the global CSS
 3. Do the whole PDF generation thing (the whole point of this exercise)
-4. Rebuild the site *without* the print flag and also rebuild the global CSS again
+4. Rebuild the site *without* the print flag
 
 ...it takes like, I dunno, 5 or 10 seconds? Which feels like *forever*. Anyways, you can generate a PDF with `npm run pdf` (or, again, just push `cmd + p` when you have it up and running).
 

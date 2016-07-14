@@ -12,7 +12,7 @@
     "build:html": "node build.js",
     "build:css": "postcss -c postcss.json -o _build/css/main.css --no-map.inline css/main.css",
     "build": "npm run build:html && npm run build:css",
-    "pdf": "NODE_ENV=print node build.js && npm run build:css && node pdf.js && npm run build",
+    "pdf": "NODE_ENV=print npm run build && node pdf.js && npm run build",
     "deploy": "npm run build && surge _build metalsmith-resume.lowmess.com"
   },
   "repository": {
