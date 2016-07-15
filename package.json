@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-resume",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A resume generator, built with Metalsmith",
   "main": "build.js",
   "engines": {
