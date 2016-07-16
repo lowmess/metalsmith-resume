@@ -1,0 +1,54 @@
+/* Variables */
+
+/* Spacing Scale - based on a ratio of 1:2 */
+:root {
+  --spacing-none: 0;
+  --spacing-extra-small: 0.25rem;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  --spacing-extra-large: 4rem;
+}
+/*
+  COLUMNS
+
+  A six step powers of two scale ranging from 0 to 4rem.
+  Namespaces are composable and thus highly grockable - check the legend below
+
+  Legend:
+
+  cc = column-count
+  cg = column-gap
+
+  0 = none
+  1 = 1st step in spacing scale
+  2 = 2nd step in spacing scale
+  3 = 3rd step in spacing scale
+  4 = 4th step in spacing scale
+  5 = 5th step in spacing scale
+
+*/
+
+@media print {
+  .cc2-p { column-count: 2; }
+
+  .cc3-p { column-count: 3; }
+
+  .cc4-p { column-count: 4; }
+
+  .cc5-p { column-count: 5; }
+
+  .cc6-p { column-count: 6; }
+
+  .cg0-p { column-gap: var(--spacing-none); }
+
+  .cg1-p { column-gap: var(--spacing-extra-small); }
+
+  .cg2-p { column-gap: var(--spacing-small); }
+
+  .cg3-p { column-gap: var(--spacing-medium); }
+
+  .cg4-p { column-gap: var(--spacing-large); }
+
+  .cg5-p { column-gap: var(--spacing-extra-large); }
+}

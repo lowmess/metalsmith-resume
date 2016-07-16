@@ -3,8 +3,6 @@
 /* nomralize */
 @import 'normalize.css';
 
-@import '_vr-reset.css';
-
 /* Tachyons */
 /* Variables */
 @import 'tachyons-colors/src/tachyons-colors.css';
@@ -56,6 +54,8 @@
 @import 'colors.css/src/colors.css';
 
 /* layout */
+@import '_vr-reset.css';
 @import '_page';
 @import '_widths';
 @import '_list';
+@import '_columns';
