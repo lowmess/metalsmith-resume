@@ -41,18 +41,4 @@
     size: letter portrait;
     margin: 0;
   }
-
-  .dn-p { display: none; }
-
-  .fl-p { float: left; }
-
-  .fr-p { float: right; }
-
-  .mt0-p { margin-top: 0; }
-
-  .bg-white-p { background-color: var(--white); }
-
-  .dark-gray-p { color: var(--dark-gray); }
-
-  .shadow-none-p { box-shadow: none; }
 }

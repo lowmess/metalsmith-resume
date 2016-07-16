@@ -50,6 +50,9 @@
 @import 'tachyons-hovers/src/tachyons-hovers.css';
 @import 'tachyons-columns/src/tachyons-columns.css';
 
+/* Print styles */
+@import 'tachyons-print/src/tachyons-print.css';
+
 /* clrs.cc */
 @import 'colors.css/src/colors.css';
 
