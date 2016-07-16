@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-resume",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "abbrev": {
       "version": "1.0.9",
@@ -4513,6 +4513,17 @@
       "version": "5.0.2",
       "from": "tachyons-position@>=5.0.1 <6.0.0",
       "resolved": "https://registry.npmjs.org/tachyons-position/-/tachyons-position-5.0.2.tgz"
+    },
+    "tachyons-print": {
+      "version": "4.0.4",
+      "from": "tachyons-print@latest",
+      "dependencies": {
+        "tachyons-floats": {
+          "version": "2.0.6",
+          "from": "tachyons-floats@>=2.0.6 <3.0.0",
+          "resolved": "https://registry.npmjs.org/tachyons-floats/-/tachyons-floats-2.0.6.tgz"
+        }
+      }
     },
     "tachyons-skins": {
       "version": "3.2.1",
