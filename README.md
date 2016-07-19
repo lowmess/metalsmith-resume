@@ -2,7 +2,7 @@
 
 ![Preview of the default generated Resume](preview.png)
 
-Listen, writing resumes sucks. Microsoft Word and Adobe InDesign were not meant to be layout or content editing tools, respectively, and neither excel at managing information. I wanted to change that for myself, so I made my resume as a [Metalsmith](http://metalsmith.io) minisite. Then I made a better one to give away to everyone else (this thing you're looking at now). The math is simple: `markdown + YAML + git > those other things I just mentioned`.
+Listen, writing resumes sucks. Microsoft Word isn't great at layout, Adobe InDesign isn't the best for content editing, and neither excel at managing information. I wanted to change that for myself, so I made my resume as a [Metalsmith](http://metalsmith.io) minisite. Then I made a better one to give away to everyone else (this thing you're looking at now). The math is simple: `markdown + YAML + git > those other things I just mentioned`.
 
 ## Editing
 
