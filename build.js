@@ -1,13 +1,12 @@
-// Metalsmith
 var Metalsmith = require('metalsmith')
 var permalinks = require('metalsmith-permalinks')
 var metadata = require('metalsmith-metadata')
 var collections = require('metalsmith-collections')
 var drafts = require('metalsmith-drafts')
 var defaults = require('metalsmith-default-values')
-// HTML
 var markdown = require('metalsmith-markdownit')
 var layouts = require('metalsmith-layouts')
+var minify = require('metalsmith-html-minifier')
 
 var siteBuild = Metalsmith(__dirname)
   .source('source')
@@ -58,6 +57,10 @@ var siteBuild = Metalsmith(__dirname)
     pattern: '**/*.html'
   }))
   .use(drafts())
+
+if (process.env.NODE_ENV == 'production') {
+  siteBuild.use(minify())
+}
 
 siteBuild.build(function (err) {
   if (err) {

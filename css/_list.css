@@ -7,25 +7,17 @@
 }
 
 @media (--breakpoint-not-small) {
-  .list-inside-ns {
-    list-style-position: inside;
-  }
+  .list-inside-ns { list-style-position: inside; }
 }
 
 @media (--breakpoint-medium) {
-  .list-inside-m {
-    list-style-position: inside;
-  }
+  .list-inside-m { list-style-position: inside; }
 }
 
 @media (--breakpoint-large) {
-  .list-inside-l {
-    list-style-position: inside;
-  }
+  .list-inside-l { list-style-position: inside; }
 }
 
 @media print {
-  .list-inside-p {
-    list-style-position: inside;
-  }
+  .list-inside-p { list-style-position: inside; }
 }
