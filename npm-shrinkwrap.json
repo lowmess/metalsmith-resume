@@ -3568,6 +3568,11 @@
       "from": "postcss-filter-plugins@2.0.0",
       "resolved": "https://registry.npmjs.org/postcss-filter-plugins/-/postcss-filter-plugins-2.0.0.tgz"
     },
+    "postcss-focus": {
+      "version": "1.0.0",
+      "from": "postcss-focus@latest",
+      "resolved": "https://registry.npmjs.org/postcss-focus/-/postcss-focus-1.0.0.tgz"
+    },
     "postcss-import": {
       "version": "8.1.2",
       "from": "postcss-import@>=8.1.2 <9.0.0",

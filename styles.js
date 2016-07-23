@@ -9,6 +9,7 @@ var plugins = [
     require('postcss-custom-properties'),
     require('postcss-custom-media'),
     require('postcss-color-function'),
+    require('postcss-focus'),
     require('autoprefixer')({
       browsers: ['last 2 versions', '> 5%']
     })

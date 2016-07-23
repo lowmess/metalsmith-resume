@@ -59,6 +59,7 @@
     "postcss-color-function": "^2.0.1",
     "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.1",
+    "postcss-focus": "^1.0.0",
     "postcss-import": "^8.1.2",
     "postcss-nested": "^1.0.0",
     "postcss-uncss": "0.0.1",
