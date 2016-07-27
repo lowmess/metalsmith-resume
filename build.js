@@ -152,7 +152,7 @@ if (process.env.NODE_ENV === 'print') {
     pdf.create(html, options).toFile('resume.pdf', function(err, res) {
       if (err) return console.log(err)
       server.exit()
-      console.log('PDF generation complete!\n')
+      console.log('\nPDF generation complete!\n')
       process.exit()
     })
   })
