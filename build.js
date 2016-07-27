@@ -67,7 +67,7 @@ var siteBuild = Metalsmith(__dirname)
   }))
   .use(drafts())
 
-if (process.env.NODE_ENV == 'production') {
+if (process.env.NODE_ENV === 'production') {
   siteBuild.use(minify())
 }
 
@@ -86,22 +86,22 @@ siteBuild.build(function (err) {
 /* PostCSS
  ******************************************************************************/
 
-function stylesheets() {
+function stylesheets () {
   var css = fs.readFileSync('css/main.css', 'utf-8')
 
   var plugins = [
-      require('postcss-import'),
-      require('postcss-nested'),
-      require('postcss-custom-properties'),
-      require('postcss-custom-media'),
-      require('postcss-color-function'),
-      require('postcss-focus'),
-      require('autoprefixer')({
-        browsers: ['last 2 versions', '> 5%']
-      })
-    ]
+    require('postcss-import'),
+    require('postcss-nested'),
+    require('postcss-custom-properties'),
+    require('postcss-custom-media'),
+    require('postcss-color-function'),
+    require('postcss-focus'),
+    require('autoprefixer')({
+      browsers: ['last 2 versions', '> 5%']
+    })
+  ]
 
-  if (process.env.NODE_ENV == 'production') {
+  if (process.env.NODE_ENV === 'production') {
     plugins.push(
       require('postcss-uncss')({
         html: ['_build/**/*.html']
@@ -136,11 +136,11 @@ function stylesheets() {
 function print () {
   var html = fs.readFileSync('_build/index.html', 'utf8')
   var options = {
-      height: '11in',
-      width: '8.5in',
-      type: 'pdf',
-      base: 'http://localhost:8008'
-    }
+    height: '11in',
+    width: '8.5in',
+    type: 'pdf',
+    base: 'http://localhost:8008'
+  }
 
   var server = require('browser-sync').create()
 
@@ -151,7 +151,7 @@ function print () {
     ui: false
   })
 
-  pdf.create(html, options).toFile('resume.pdf', function(err, res) {
+  pdf.create(html, options).toFile('resume.pdf', function (err, res) {
     if (err) return console.log(err)
     server.exit()
     console.log('\nPDF generation complete!\n')

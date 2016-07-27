@@ -1,0 +1,32 @@
+//- Experiences are the molecular unit of the resume. They are what the markdown
+    files in the source directory compile in to.
+mixin experience(exp)
+  +section
+    //- Position
+    h3.f3.mb2.mb0-p.fw6= exp.title
+    //- Metadata
+    +left-column
+      ul.list.ml0.pl0.f5.mt1.fw2
+        //- Place of Work
+        li.fw5
+          if exp.url
+            +link(exp.subtitle, exp.url)
+          else
+            = exp.subtitle
+        //- Time
+        li
+          time(datetime=moment.utc(exp.startDate))= moment.utc(exp.startDate).format("MMM YYYY")
+          | &#032;&ndash;&#032;
+          if exp.endDate
+            time(datetime=moment.utc(exp.endDate))= moment.utc(exp.endDate).format("MMM YYYY")
+          else
+            | Present
+        //- Location
+        if exp.location
+          li= exp.location
+
+    //- Contents
+    if exp.contents
+      +right-column
+        .measure.f5
+          != exp.contents
