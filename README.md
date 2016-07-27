@@ -68,6 +68,8 @@ npm i
 
 `npm run build` will build the resume site for you into the `_build` directory. Pretty straightforward.
 
+Oh yeah and `npm run build:minify` will build, umm, minified files. I'd recommend doing that before you deploy.
+
 ### Styling
 
 This project uses [Tachyons](http://tachyons.io) (with a few custom classes added in for good measure). All modules are included in the build, which is then run through a few performance-enhancing PostCSS plugins (PEPP'rd) like [UnCSS](https://github.com/giakki/uncss) & [cssnano](http://cssnano.co/). As of right now, all the loaded CSS is [~3kb](http://cssstats.com/stats?url=http%3A%2F%2Fmetalsmith-resume.lowmess.com&ua=Browser%20Default), and that's pretty damn cool.[1] 🤓
@@ -83,4 +85,4 @@ Contributions are welcome and encouraged:
 
 ***
 
-[1] For reference, this long-as-hell README is, like, almost five goddamn KBs. The whole generated site is [3.24kb gzipped](https://gtmetrix.com/reports/metalsmith-resume.lowmess.com/oQim8iPf).
+[1] For reference, this long-as-hell README is, like, almost five goddamn KBs. The whole generated site is [3.17kb minified & gzipped](https://gtmetrix.com/reports/metalsmith-resume.lowmess.com/1PRRzoBG).

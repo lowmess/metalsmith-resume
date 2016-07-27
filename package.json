@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-resume",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A resume generator, built with Metalsmith",
   "main": "build.js",
   "engines": {
@@ -9,11 +9,10 @@
   "scripts": {
     "start": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm run build && browser-sync reload'",
     "browser_sync": "browser-sync start --server _build --no-ui --no-notify",
-    "build:html": "node build.js",
-    "build:css": "postcss -c postcss.json -o _build/css/main.css --no-map.inline css/main.css",
-    "build": "npm run build:html && npm run build:css",
-    "pdf": "NODE_ENV=print npm run build && node pdf.js && npm run build",
-    "deploy": "npm run build && surge _build metalsmith-resume.lowmess.com"
+    "build": "node build.js",
+    "build:minify": "NODE_ENV=production npm run build",
+    "pdf": "NODE_ENV=print npm run build && npm run build",
+    "deploy": "npm run build:minify && surge _build metalsmith-resume.lowmess.com"
   },
   "repository": {
     "type": "git",
@@ -46,6 +45,7 @@
     "metalsmith-collections": "^0.7.0",
     "metalsmith-default-values": "0.0.2",
     "metalsmith-drafts": "0.0.1",
+    "metalsmith-html-minifier": "^2.0.0",
     "metalsmith-layouts": "^1.6.5",
     "metalsmith-markdownit": "^0.3.0",
     "metalsmith-metadata": "0.0.4",
@@ -54,10 +54,10 @@
     "nodemon": "^1.9.2",
     "normalize.css": "^4.1.1",
     "postcss": "^5.0.21",
-    "postcss-cli": "^2.5.2",
     "postcss-color-function": "^2.0.1",
     "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.1",
+    "postcss-focus": "^1.0.0",
     "postcss-import": "^8.1.2",
     "postcss-nested": "^1.0.0",
     "postcss-uncss": "0.0.1",

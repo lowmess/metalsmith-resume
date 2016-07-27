@@ -2,7 +2,7 @@ extends default
 
 block content
 
-  h3.f5.fw7.mt2.mb0.ttu.accent= title
+  +section-title(title)
   if title == 'Experience'
     for job in collections.experience
       +experience(job)
@@ -10,6 +10,5 @@ block content
     for school in collections.education
       +experience(school)
 
-  footer.mt4
-    hr.w4.ba.b--accent.bw1.ml0
-    p: a.link.dark-gray.underline-hover(href='/') Back to Full Resume
+  +footer
+    p: +link('Back to Full Resume', '/')

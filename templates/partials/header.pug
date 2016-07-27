@@ -1,16 +1,17 @@
 header.pa4.bg-accent.bg-accent-text(class=site.printstyles ? 'dark-gray-p bg-white-p' : '')
-  h1.f2.f1-ns.lh-title.mb2: a.link.bg-accent-text(href="/", class=site.printstyles ? 'dark-gray-p' : '')!= person.name
-  .w-100.cf.mt2
-    ul.w-33-ns.w-33-p.fl-ns.fl-p.list.ml0.pl0.lh-title.mb2.mb0-ns.f5
-      if person.email
-        li: a.link.bg-accent-text.underline-hover(href='mailto:' + person.email, class=site.printstyles ? 'dark-gray-p' : '')= person.email
-      if person.phone
-        li= person.phone
-      if person.location
-        li= person.location
-      if person.links
-        each value, index in person.links
-          li: a.link.bg-accent-text.underline-hover(href=value, class=site.printstyles ? 'dark-gray-p' : '')= index
-    .w-66-ns.w-66-p.fr-ns.fr-p
+  h1.f2.f1-ns.mb1: a.link.bg-accent-text(href="/", class=site.printstyles ? 'dark-gray-p' : '')!= person.name
+  .cf
+    +left-column
+      ul.list.ml0.pl0.mb2.mb0-ns.f5
+        if person.email
+          li: +header-link(person.email, 'mailto:' + person.email)
+        if person.phone
+          li= person.phone
+        if person.location
+          li= person.location
+        if person.links
+          each value, index in person.links
+            li: +header-link(index, value)
+    +right-column
       if person.intro
-        p.measure.lh-title.mt0.f5!= person.intro
+        p.measure.mt0.f5!= person.intro
