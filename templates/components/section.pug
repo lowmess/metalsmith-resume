@@ -1,0 +1,11 @@
+//- Section elements
+mixin section-title(content)
+  h3.f5.fw7.mt2.mb3.ttu.accent
+    if block
+      block
+    else
+      = content
+
+mixin section
+  section.cf.mb4.mb3-ns.mb3-p
+    block

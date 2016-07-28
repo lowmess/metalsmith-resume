@@ -14,8 +14,7 @@ var postcss = require('postcss')
 // PDF
 var pdf = require('html-pdf')
 
-/*******************************************************************************
- * Metalsmith
+/* Metalsmith
  ******************************************************************************/
 
 var siteBuild = Metalsmith(__dirname)
@@ -68,7 +67,7 @@ var siteBuild = Metalsmith(__dirname)
   }))
   .use(drafts())
 
-if (process.env.NODE_ENV == 'production') {
+if (process.env.NODE_ENV === 'production') {
   siteBuild.use(minify())
 }
 
@@ -77,16 +76,20 @@ siteBuild.build(function (err) {
     console.log(err)
   } else {
     console.log('Metalsmith complete!\n')
+    stylesheets()
+    if (process.env.NODE_ENV === 'print') {
+      print()
+    }
   }
 })
 
-/*******************************************************************************
- * PostCSS
+/* PostCSS
  ******************************************************************************/
 
-var css = fs.readFileSync('css/main.css', 'utf-8')
+function stylesheets () {
+  var css = fs.readFileSync('css/main.css', 'utf-8')
 
-var plugins = [
+  var plugins = [
     require('postcss-import'),
     require('postcss-nested'),
     require('postcss-custom-properties'),
@@ -98,62 +101,60 @@ var plugins = [
     })
   ]
 
-if (process.env.NODE_ENV == 'production') {
-  plugins.push(
-    require('postcss-uncss')({
-      html: ['_build/**/*.html']
-    }),
-    require('css-mqpacker'),
-    require('cssnano')
-  )
+  if (process.env.NODE_ENV === 'production') {
+    plugins.push(
+      require('postcss-uncss')({
+        html: ['_build/**/*.html']
+      }),
+      require('css-mqpacker'),
+      require('cssnano')
+    )
+  }
+
+  postcss(plugins)
+    .process(css, {
+      from: 'css/main.css',
+      to: '_build/css/main.css',
+      map: { inline: false }
+    })
+    .then(function (result) {
+      if (result.warnings()) {
+        result.warnings().forEach(warn => {
+          console.warn(warn.toString())
+        })
+      }
+      fs.mkdirSync('_build/css')
+      fs.writeFileSync('_build/css/main.css', result.css, 'utf-8')
+      if (result.map) fs.writeFileSync('_build/css/main.css.map', result.map, 'utf-8')
+      console.log('PostCSS Complete!\n')
+    })
 }
 
-var styles = postcss(plugins)
-  .process(css, {
-    from: 'css/main.css',
-    to: '_build/css/main.css',
-    map: { inline: false }
-  })
-  .then(function (result) {
-    if (result.warnings()) {
-      result.warnings().forEach(warn => {
-        console.warn(warn.toString())
-      })
-    }
-    fs.mkdirSync('_build/css')
-    fs.writeFileSync('_build/css/main.css', result.css, 'utf-8')
-    if (result.map) fs.writeFileSync('_build/css/main.css.map', result.map, 'utf-8')
-    console.log('PostCSS Complete!\n')
-  })
-
-/*******************************************************************************
- * PDF
+/* PDF
  ******************************************************************************/
 
-if (process.env.NODE_ENV === 'print') {
-  styles.then(function () {
-    var html = fs.readFileSync('_build/index.html', 'utf8')
-    var options = {
-        height: '11in',
-        width: '8.5in',
-        type: 'pdf',
-        base: 'http://localhost:8008'
-      }
+function print () {
+  var html = fs.readFileSync('_build/index.html', 'utf8')
+  var options = {
+    height: '11in',
+    width: '8.5in',
+    type: 'pdf',
+    base: 'http://localhost:8008'
+  }
 
-    var server = require('browser-sync').create()
+  var server = require('browser-sync').create()
 
-    server.init({
-      server: '_build',
-      port: 8008,
-      open: false,
-      ui: false
-    })
+  server.init({
+    server: '_build',
+    port: 8008,
+    open: false,
+    ui: false
+  })
 
-    pdf.create(html, options).toFile('resume.pdf', function(err, res) {
-      if (err) return console.log(err)
-      server.exit()
-      console.log('\nPDF generation complete!\n')
-      process.exit()
-    })
+  pdf.create(html, options).toFile('resume.pdf', function (err, res) {
+    if (err) return console.log(err)
+    server.exit()
+    console.log('\nPDF generation complete!\n')
+    process.exit()
   })
 }
