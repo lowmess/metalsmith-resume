@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-resume",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A resume generator, built with Metalsmith",
   "main": "build.js",
   "engines": {
@@ -11,8 +11,7 @@
     "browser_sync": "browser-sync start --server _build --no-ui --no-notify",
     "build": "node build.js",
     "build:minify": "NODE_ENV=production npm run build",
-    "pdf": "NODE_ENV=print npm run build && npm run build",
-    "deploy": "npm run build:minify && surge _build metalsmith-resume.lowmess.com"
+    "pdf": "NODE_ENV=print npm run build && npm run build"
   },
   "repository": {
     "type": "git",

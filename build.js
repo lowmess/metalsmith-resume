@@ -98,16 +98,16 @@ function stylesheets () {
     require('postcss-focus'),
     require('autoprefixer')({
       browsers: ['last 2 versions', '> 5%']
-    })
+    }),
+    require('css-mqpacker'),
+    require('cssnano')
   ]
 
   if (process.env.NODE_ENV === 'production') {
     plugins.push(
       require('postcss-uncss')({
         html: ['_build/**/*.html']
-      }),
-      require('css-mqpacker'),
-      require('cssnano')
+      })
     )
   }
 
