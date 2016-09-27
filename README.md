@@ -85,4 +85,4 @@ Contributions are welcome and encouraged:
 
 ***
 
-[1] For reference, this long-as-hell README is, like, almost five goddamn KBs. The whole generated site is [3.17kb minified & gzipped](https://gtmetrix.com/reports/metalsmith-resume.lowmess.com/1PRRzoBG).
+[1] For reference, this long-as-hell README is, like, almost five goddamn KBs.
