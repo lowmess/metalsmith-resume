@@ -41,8 +41,6 @@
     "html-pdf": "^2.0.1",
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.7.0",
-    "metalsmith-default-values": "0.0.2",
-    "metalsmith-drafts": "0.0.1",
     "metalsmith-html-minifier": "^2.0.0",
     "metalsmith-layouts": "^1.6.5",
     "metalsmith-markdownit": "^0.3.0",
