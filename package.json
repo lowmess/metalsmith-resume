@@ -64,6 +64,13 @@
   },
   "devDependencies": {
     "browser-sync": "^2.12.10",
-    "nodemon": "^1.9.2"
+    "cz-conventional-changelog": "^1.2.0",
+    "nodemon": "^1.9.2",
+    "semantic-release": "^6.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
