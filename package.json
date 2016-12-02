@@ -65,8 +65,7 @@
   "devDependencies": {
     "browser-sync": "^2.12.10",
     "cz-conventional-changelog": "^1.2.0",
-    "nodemon": "^1.9.2",
-    "semantic-release": "^6.3.2"
+    "nodemon": "^1.9.2"
   },
   "config": {
     "commitizen": {
