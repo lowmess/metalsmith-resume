@@ -9,7 +9,7 @@
   "scripts": {
     "start": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm run build && browser-sync reload'",
     "browser_sync": "browser-sync start --server _build --no-ui --no-notify",
-    "build": "npm run test && node build.js",
+    "build": "node build.js",
     "build:minify": "NODE_ENV=production npm run build",
     "pdf": "NODE_ENV=print npm run build && npm run build",
     "test": "standard && stylelint css/*.css"
