@@ -1,6 +1,6 @@
 //- Section elements
 mixin section-title(content)
-  h3.f5.fw7.mt2.mb3.ttu.accent
+  h3.f5.fw7.mt2.mb3.ttu.accent(class=site.printstyles ? 'dark-gray-p' : '')
     if block
       block
     else

@@ -13,6 +13,6 @@ schools: 1
 # show 'References available' link in footer
 references: true
 # Remove theme color on print
-printstyles: false
+printstyles: true
 # Show promo link under resume (you probably want to set this to false)
 promolink: true
