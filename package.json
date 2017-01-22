@@ -9,9 +9,10 @@
   "scripts": {
     "start": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm run build && browser-sync reload'",
     "browser_sync": "browser-sync start --server _build --no-ui --no-notify",
-    "build": "node build.js",
+    "build": "npm run test && node build.js",
     "build:minify": "NODE_ENV=production npm run build",
-    "pdf": "NODE_ENV=print npm run build && npm run build"
+    "pdf": "NODE_ENV=print npm run build && npm run build",
+    "test": "standard && stylelint css/*.css"
   },
   "repository": {
     "type": "git",
@@ -65,7 +66,13 @@
   "devDependencies": {
     "browser-sync": "^2.12.10",
     "cz-conventional-changelog": "^1.2.0",
-    "nodemon": "^1.9.2"
+    "nodemon": "^1.9.2",
+    "standard": "^8.6.0",
+    "stylelint": "^7.7.1",
+    "stylelint-config-lowmess": "^0.0.1"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-lowmess"
   },
   "config": {
     "commitizen": {
