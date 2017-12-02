@@ -29,7 +29,7 @@ body.bg-white.bg-light-gray-page.bg-white-p.dark-gray(class= process.env.NODE_EN
             - for (var i = 0; i < site.schools; i++)
               +experience(collections.education[i])
 
-        if person.proficiencies.length > 0
+        if person.proficiencies
           +section
             +left-column
               +section-title('Proficiencies')
