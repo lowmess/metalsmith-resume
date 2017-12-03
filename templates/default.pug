@@ -20,7 +20,8 @@ body.bg-white.bg-light-gray-page.bg-white-p.dark-gray(class= process.env.NODE_EN
             +accent-link('Experience', '/experience')
           +section
             - for (var i = 0; i < site.jobs; i++)
-              +experience(collections.experience[i])
+              if collections.experience[i].published != false
+                +experience(collections.experience[i])
 
         if site.schools > 0
           +section-title

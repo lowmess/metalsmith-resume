@@ -5,10 +5,12 @@ block content
   +section-title(title)
   if title == 'Experience'
     for job in collections.experience
-      +experience(job)
+      if job.published != false
+        +experience(job)
   else if title == 'Education'
     for school in collections.education
-      +experience(school)
+      if school.published != false
+        +experience(school)
 
   +footer
     p: +link('Back to Full Resume', '/')
