@@ -24,6 +24,7 @@ var siteBuild = Metalsmith(__dirname)
     'site': 'site.yaml',
     'person': 'person.yaml'
   }))
+  .use(drafts())
   .use(collections({
     education: {
       pattern: 'education/**/*.md',
