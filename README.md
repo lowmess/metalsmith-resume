@@ -1,3 +1,9 @@
+# DEPRECATED
+
+This project has been deprecated. The [JSONResume](https://jsonresume.org/) project is a good alternative.
+
+---
+
 # Metalsmith Resume
 
 ![Preview of the default generated Resume](preview.png)
